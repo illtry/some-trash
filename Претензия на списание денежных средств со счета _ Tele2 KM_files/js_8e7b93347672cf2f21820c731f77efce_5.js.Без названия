@@ -1,0 +1,267 @@
+/* Source and licensing information for the line(s) below can be found at http://kmumb.tele2.ru/sites/all/modules/km/km_sms/jscripts/km_sms_init.js. */
+var first_load=true
+function resize_sms(){var w=Math.min($(window).width()-100,Drupal.settings.km_sms.resolutionW),h=Math.min($(window).height()-100,Drupal.settings.km_sms.resolutionH);this.resize(w,h,null);this.moveTo(null,10);if(jQuery.browser.msie)this.getContent().find('#content').css({width:w-16});w=null;h=null;Drupal.attachBehaviors(this);updateSMSWindow()}
+function item_list(array){var i=0,content='';for(i in array)content+='<li number="'+i+'" >'+array[i]+'</li>';return content};Drupal.theme.prototype.item_list=item_list
+function sms_destination_keyup(){if($("#sms_destination").val().length>10&&(typeof(Drupal.settings.sms_from_sender_checkbox_flag)=="undefined"||!Drupal.settings.sms_from_sender_checkbox_flag)){$("#edit-sms-reload-button").removeAttr('disabled')}else $("#edit-sms-reload-button").attr('disabled','disabled')}
+function selectNumber_click(){$('#selectNumberList').toggle()}
+function updateSMSWindow(){$('#send_sms_status').empty();phoneNo=$("#cr_contact_info").val();if(phoneNo&&(phoneNo!=$("#sms_destination").val()||$('ul#sms-template-list').length==0)){phoneNo=phoneNo.replace(/[^0-9]/g,'');$("#sms_destination").val(phoneNo)}else if(!phoneNo)$("#sms_destination").val('');if(phoneNo&&typeof Drupal.settings.km_customer!='undefined'&&typeof(Drupal.settings.km_customer.region_tid)!='undefined'){$("#sms_region").val(Drupal.settings.km_customer.region_tid)}else if(typeof(Drupal.settings.km_filter)!='undefined')$("#sms_region").val(Drupal.settings.km_filter.region_tid);$("#edit-sms-reload-button").trigger('click');$("#sms_destination").keyup(sms_destination_keyup);$("#selectNumber").empty();$("#selectNumberList").hide();var stackPhone='';if(typeof(Drupal.settings.km_customer)!='undefined'){stackPhone=Drupal.theme('item_list',Drupal.settings.km_customer.stack_phone)}else if(typeof(Drupal.settings.km_sms.stack_phone)!='undefined'){stackPhone=Drupal.theme('item_list',Drupal.settings.km_sms.stack_phone)}else stackPhone=false;if(stackPhone){$("#selectNumber").after('<ul id="selectNumberList" style="display:none;">'+stackPhone+'</ul>');var widthSelect=100;$("#selectNumberList li").each(function(){var str=new String();str=$(this).text();if((str.length*9)>widthSelect)widthSelect=str.length*9;str=null});$("#selectNumberList").css('width',widthSelect+'px');$("#selectNumber").unbind("click");$("#selectNumber").click(selectNumber_click);$("#selectNumberList li").each(function(){$(this).unbind("click");$(this).click(function(){$('#sms_destination').val($(this).attr("number"))})});$("#selectNumberList").unbind("mouseout").unbind("mouseover");$("#selectNumberList").mouseout(function(){hideSelect()}).mouseover(function(){resetHideSelect()})}else{$("#selectNumber").unbind("click");$("#selectNumberList").unbind("mouseout").unbind("mouseover");$("#selectNumberList li").each(function(){$(this).unbind("click")})}};var hideTimeout=''
+function hideSelect(){hideTimeout=setTimeout(function(){$("#selectNumberList").hide()},1e3)}
+function updateSendersList(){var region_senders='';if(phoneNo&&typeof Drupal.settings.km_customer!='undefined'&&typeof(Drupal.settings.km_customer.region_tid)!='undefined'){region_senders=Drupal.settings.km_customer.region_tid}else if(typeof(Drupal.settings.km_filter)!='undefined')region_senders=Drupal.settings.km_filter.region_tid;$.post('/js/km_sms/load_senders',{region_tid:region_senders,destinationNo:$("#sms_destination").val()},function(data,textStatus){$("#sms_from_sender").empty();for(var i in data)$("#sms_from_sender").append("<option value=\""+data[i]+"\">"+data[i]+"</option>")},'json')}
+function resetHideSelect(){clearTimeout(hideTimeout)};$(document).ready(function(){var argx="km_smsform",smsWindow=new Boxy($('#block-km_sms-sms-form .content'),{title:Drupal.t('Send SMS form'),modal:true,fixed:true,show:false,center:true,unloadOnHide:false,afterShow:resize_sms});$.listen("click","a.smsWindow",function(event){var linkstring=$(this).attr('href'),args=linkstring.split('/');$("#edit-template-id").val(args[2]);if(Drupal.settings.googleanalytics)ga('send',{hitType:'event',eventCategory:'km',eventAction:'open',eventLabel:argx});if(typeof(window.yaCounter)!="undefined")yaCounter.reachGoal('kmOpen',{params:argx});if(first_load){$.getScript(Drupal.settings.km_sms.module_path+"/jscripts/km_sms.js",function(){Drupal.attachBehaviors(this);first_load=false})}else{$('#edit-templateType-0').attr('checked','checked');$('#edit-templateType-1').removeAttr('checked');hideElement()};smsWindow.show();sms_form_link=null;url=null;return false});$.listen("click","a.smsnewWindow",function(event){var linkstring=$(this).attr('href'),args=linkstring.split('/');$("#edit-template-id").val(args[2]);if(Drupal.settings.googleanalytics)ga('send',{hitType:'event',eventCategory:'km',eventAction:'open',eventLabel:argx});if(typeof(window.yaCounter)!="undefined")yaCounter.reachGoal('kmOpen',{params:argx});if(first_load){$.getScript(Drupal.settings.km_sms.module_path+"/jscripts/km_sms_new.js",function(){first_load=false;smsWindow.show();sms_form_link=null;url=null;return false})}else{$('#edit-templateType-0').attr('checked','checked');$('#edit-templateType-1').removeAttr('checked');hideElement();smsWindow.show();sms_form_link=null;url=null;return false};$("#edit-sms-reload-button").bind('click',function(){updateSendersList()});return false});$.listen("click","a.smsFast",function(event){if(typeof Drupal.settings.km_customer!='undefined'&&typeof Drupal.settings.km_customer.subscribers!='undefined'&&Drupal.settings.km_customer.subscribers.length>1){Boxy.alert(Drupal.t('There are more then one subscriber on this account. You can send sms only to one subscriber.'),null,{title:Drupal.t('Error'),unloadOnHide:true});return false};var phone=$("#cr_contact_info").val();if(!phone){Boxy.alert(Drupal.t('You must enter phone#'),null,{title:Drupal.t('Error'),unloadOnHide:true})}else{var $this=$(this);url=$this.attr('href');$this.addClass('added');$.post(url,{destination:phone},function(data,textStatus){if(data[0]&&textStatus=='success');else Boxy.alert(data[1],null,{title:Drupal.t('Warning!'),unloadOnHide:true,behaviours:function(r){$(r).parents(".boxy-wrapper").addClass('alert')}});$this.removeClass('added')},'json')};phone=null;return false})});;
+/* Source and licensing information for the above line(s) can be found at http://kmumb.tele2.ru/sites/all/modules/km/km_sms/jscripts/km_sms_init.js. */
+/* Source and licensing information for the line(s) below can be found at http://kmumb.tele2.ru/misc/textarea.js. */
+Drupal.behaviors.textarea=function(context){$('textarea.resizable:not(.textarea-processed)',context).each(function(){if($(this).is('textarea.teaser:not(.teaser-processed)'))return false;var textarea=$(this).addClass('textarea-processed'),staticOffset=null;$(this).wrap('<div class="resizable-textarea"><span></span></div>').parent().append($('<div class="grippie"></div>').mousedown(startDrag));var grippie=$('div.grippie',$(this).parent())[0];grippie.style.marginRight=(grippie.offsetWidth-$(this)[0].offsetWidth)+'px'
+function startDrag(e){staticOffset=textarea.height()-e.pageY;textarea.css('opacity',0.25);$(document).mousemove(performDrag).mouseup(endDrag);return false}
+function performDrag(e){textarea.height(Math.max(32,staticOffset+e.pageY)+'px');return false}
+function endDrag(e){$(document).unbind("mousemove",performDrag).unbind("mouseup",endDrag);textarea.css('opacity',1)}})};
+/* Source and licensing information for the above line(s) can be found at http://kmumb.tele2.ru/misc/textarea.js. */
+/*!
+* jQuery Form Plugin
+* version: 2.43 (12-MAR-2010)
+* @requires jQuery v1.3.2 or later
+*
+* Examples and documentation at: http://malsup.com/jquery/form/
+* Dual licensed under the MIT and GPL licenses:
+* http://www.opensource.org/licenses/mit-license.php
+* http://www.gnu.org/licenses/gpl.html
+*/
+(function(b){function o(){if(b.fn.ajaxSubmit.debug){var a="[jquery.form] "+Array.prototype.join.call(arguments,"");if(window.console&&window.console.log)window.console.log(a);else window.opera&&window.opera.postError&&window.opera.postError(a)}}b.fn.ajaxSubmit=function(a){function d(){function r(){var p=h.attr("target"),n=h.attr("action");j.setAttribute("target",z);j.getAttribute("method")!="POST"&&j.setAttribute("method","POST");j.getAttribute("action")!=g.url&&j.setAttribute("action",g.url);g.skipEncodingOverride||
+h.attr({encoding:"multipart/form-data",enctype:"multipart/form-data"});g.timeout&&setTimeout(function(){C=true;s()},g.timeout);var m=[];try{if(g.extraData)for(var u in g.extraData)m.push(b('<input type="hidden" name="'+u+'" value="'+g.extraData[u]+'" />').appendTo(j)[0]);t.appendTo("body");t.data("form-plugin-onload",s);j.submit()}finally{j.setAttribute("action",n);p?j.setAttribute("target",p):h.removeAttr("target");b(m).remove()}}function s(){if(!D){var p=true;try{if(C)throw"timeout";var n,m;m=v.contentWindow?
+v.contentWindow.document:v.contentDocument?v.contentDocument:v.document;var u=g.dataType=="xml"||m.XMLDocument||b.isXMLDoc(m);o("isXml="+u);if(!u&&(m.body==null||m.body.innerHTML=="")){if(--G){o("requeing onLoad callback, DOM not available");setTimeout(s,250);return}o("Could not access iframe DOM after 100 tries.");return}o("response detected");D=true;i.responseText=m.body?m.body.innerHTML:null;i.responseXML=m.XMLDocument?m.XMLDocument:m;i.getResponseHeader=function(H){return{"content-type":g.dataType}[H]};
+if(g.dataType=="json"||g.dataType=="script"){var E=m.getElementsByTagName("textarea")[0];if(E)i.responseText=E.value;else{var F=m.getElementsByTagName("pre")[0];if(F)i.responseText=F.innerHTML}}else if(g.dataType=="xml"&&!i.responseXML&&i.responseText!=null)i.responseXML=A(i.responseText);n=b.httpData(i,g.dataType)}catch(B){o("error caught:",B);p=false;i.error=B;b.handleError(g,i,"error",B)}if(p){g.success(n,"success");w&&b.event.trigger("ajaxSuccess",[i,g])}w&&b.event.trigger("ajaxComplete",[i,g]);
+w&&!--b.active&&b.event.trigger("ajaxStop");if(g.complete)g.complete(i,p?"success":"error");setTimeout(function(){t.removeData("form-plugin-onload");t.remove();i.responseXML=null},100)}}function A(p,n){if(window.ActiveXObject){n=new ActiveXObject("Microsoft.XMLDOM");n.async="false";n.loadXML(p)}else n=(new DOMParser).parseFromString(p,"text/xml");return n&&n.documentElement&&n.documentElement.tagName!="parsererror"?n:null}var j=h[0];if(b(":input[name=submit]",j).length)alert('Error: Form elements must not be named "submit".');
+else{var g=b.extend({},b.ajaxSettings,a),q=b.extend(true,{},b.extend(true,{},b.ajaxSettings),g),z="jqFormIO"+(new Date).getTime(),t=b('<iframe id="'+z+'" name="'+z+'" src="'+g.iframeSrc+'" onload="(jQuery(this).data(\'form-plugin-onload\'))()" />'),v=t[0];t.css({position:"absolute",top:"-1000px",left:"-1000px"});var i={aborted:0,responseText:null,responseXML:null,status:0,statusText:"n/a",getAllResponseHeaders:function(){},getResponseHeader:function(){},setRequestHeader:function(){},abort:function(){this.aborted=
+1;t.attr("src",g.iframeSrc)}},w=g.global;w&&!b.active++&&b.event.trigger("ajaxStart");w&&b.event.trigger("ajaxSend",[i,g]);if(q.beforeSend&&q.beforeSend(i,q)===false)q.global&&b.active--;else if(!i.aborted){var D=false,C=0;if(q=j.clk){var y=q.name;if(y&&!q.disabled){g.extraData=g.extraData||{};g.extraData[y]=q.value;if(q.type=="image"){g.extraData[y+".x"]=j.clk_x;g.extraData[y+".y"]=j.clk_y}}}g.forceSync?r():setTimeout(r,10);var G=100}}}if(!this.length){o("ajaxSubmit: skipping submit process - no element selected");
+return this}if(typeof a=="function")a={success:a};var e=b.trim(this.attr("action"));if(e)e=(e.match(/^([^#]+)/)||[])[1];e=e||window.location.href||"";a=b.extend({url:e,type:this.attr("method")||"GET",iframeSrc:/^https/i.test(window.location.href||"")?"javascript:false":"about:blank"},a||{});e={};this.trigger("form-pre-serialize",[this,a,e]);if(e.veto){o("ajaxSubmit: submit vetoed via form-pre-serialize trigger");return this}if(a.beforeSerialize&&a.beforeSerialize(this,a)===false){o("ajaxSubmit: submit aborted via beforeSerialize callback");
+return this}var f=this.formToArray(a.semantic);if(a.data){a.extraData=a.data;for(var c in a.data)if(a.data[c]instanceof Array)for(var l in a.data[c])f.push({name:c,value:a.data[c][l]});else f.push({name:c,value:a.data[c]})}if(a.beforeSubmit&&a.beforeSubmit(f,this,a)===false){o("ajaxSubmit: submit aborted via beforeSubmit callback");return this}this.trigger("form-submit-validate",[f,this,a,e]);if(e.veto){o("ajaxSubmit: submit vetoed via form-submit-validate trigger");return this}c=b.param(f);if(a.type.toUpperCase()==
+"GET"){a.url+=(a.url.indexOf("?")>=0?"&":"?")+c;a.data=null}else a.data=c;var h=this,k=[];a.resetForm&&k.push(function(){h.resetForm()});a.clearForm&&k.push(function(){h.clearForm()});if(!a.dataType&&a.target){var x=a.success||function(){};k.push(function(r){var s=a.replaceTarget?"replaceWith":"html";b(a.target)[s](r).each(x,arguments)})}else a.success&&k.push(a.success);a.success=function(r,s,A){for(var j=0,g=k.length;j<g;j++)k[j].apply(a,[r,s,A||h,h])};c=b("input:file",this).fieldValue();l=false;
+for(e=0;e<c.length;e++)if(c[e])l=true;if(c.length&&a.iframe!==false||a.iframe||l||0)a.closeKeepAlive?b.get(a.closeKeepAlive,d):d();else b.ajax(a);this.trigger("form-submit-notify",[this,a]);return this};b.fn.ajaxForm=function(a){return this.ajaxFormUnbind().bind("submit.form-plugin",function(d){d.preventDefault();b(this).ajaxSubmit(a)}).bind("click.form-plugin",function(d){var e=d.target,f=b(e);if(!f.is(":submit,input:image")){e=f.closest(":submit");if(e.length==0)return;e=e[0]}var c=this;c.clk=e;
+if(e.type=="image")if(d.offsetX!=undefined){c.clk_x=d.offsetX;c.clk_y=d.offsetY}else if(typeof b.fn.offset=="function"){f=f.offset();c.clk_x=d.pageX-f.left;c.clk_y=d.pageY-f.top}else{c.clk_x=d.pageX-e.offsetLeft;c.clk_y=d.pageY-e.offsetTop}setTimeout(function(){c.clk=c.clk_x=c.clk_y=null},100)})};b.fn.ajaxFormUnbind=function(){return this.unbind("submit.form-plugin click.form-plugin")};b.fn.formToArray=function(a){var d=[];if(this.length==0)return d;var e=this[0],f=a?e.getElementsByTagName("*"):e.elements;
+if(!f)return d;for(var c=0,l=f.length;c<l;c++){var h=f[c],k=h.name;if(k)if(a&&e.clk&&h.type=="image"){if(!h.disabled&&e.clk==h){d.push({name:k,value:b(h).val()});d.push({name:k+".x",value:e.clk_x},{name:k+".y",value:e.clk_y})}}else if((h=b.fieldValue(h,true))&&h.constructor==Array)for(var x=0,r=h.length;x<r;x++)d.push({name:k,value:h[x]});else h!==null&&typeof h!="undefined"&&d.push({name:k,value:h})}if(!a&&e.clk){a=b(e.clk);f=a[0];if((k=f.name)&&!f.disabled&&f.type=="image"){d.push({name:k,value:a.val()});
+d.push({name:k+".x",value:e.clk_x},{name:k+".y",value:e.clk_y})}}return d};b.fn.formSerialize=function(a){return b.param(this.formToArray(a))};b.fn.fieldSerialize=function(a){var d=[];this.each(function(){var e=this.name;if(e){var f=b.fieldValue(this,a);if(f&&f.constructor==Array)for(var c=0,l=f.length;c<l;c++)d.push({name:e,value:f[c]});else f!==null&&typeof f!="undefined"&&d.push({name:this.name,value:f})}});return b.param(d)};b.fn.fieldValue=function(a){for(var d=[],e=0,f=this.length;e<f;e++){var c=
+b.fieldValue(this[e],a);c===null||typeof c=="undefined"||c.constructor==Array&&!c.length||(c.constructor==Array?b.merge(d,c):d.push(c))}return d};b.fieldValue=function(a,d){var e=a.name,f=a.type,c=a.tagName.toLowerCase();if(typeof d=="undefined")d=true;if(d&&(!e||a.disabled||f=="reset"||f=="button"||(f=="checkbox"||f=="radio")&&!a.checked||(f=="submit"||f=="image")&&a.form&&a.form.clk!=a||c=="select"&&a.selectedIndex==-1))return null;if(c=="select"){c=a.selectedIndex;if(c<0)return null;d=[];a=a.options;
+e=(f=f=="select-one")?c+1:a.length;for(c=f?c:0;c<e;c++){var l=a[c];if(l.selected){var h=l.value;h||(h=l.attributes&&l.attributes.value&&!l.attributes.value.specified?l.text:l.value);if(f)return h;d.push(h)}}return d}return a.value};b.fn.clearForm=function(){return this.each(function(){b("input,select,textarea",this).clearFields()})};b.fn.clearFields=b.fn.clearInputs=function(){return this.each(function(){var a=this.type,d=this.tagName.toLowerCase();if(a=="text"||a=="password"||d=="textarea")this.value=
+"";else if(a=="checkbox"||a=="radio")this.checked=false;else if(d=="select")this.selectedIndex=-1})};b.fn.resetForm=function(){return this.each(function(){if(typeof this.reset=="function"||typeof this.reset=="object"&&!this.reset.nodeType)this.reset()})};b.fn.enable=function(a){if(a==undefined)a=true;return this.each(function(){this.disabled=!a})};b.fn.selected=function(a){if(a==undefined)a=true;return this.each(function(){var d=this.type;if(d=="checkbox"||d=="radio")this.checked=a;else if(this.tagName.toLowerCase()==
+"option"){d=b(this).parent("select");a&&d[0]&&d[0].type=="select-one"&&d.find("option").selected(false);this.selected=a}})}})(jQuery);
+;/**/
+
+/**
+ * Provides AJAX-like page updating via AHAH (Asynchronous HTML and HTTP).
+ *
+ * AHAH is a method of making a request via Javascript while viewing an HTML
+ * page. The request returns a small chunk of HTML, which is then directly
+ * injected into the page.
+ *
+ * Drupal uses this file to enhance form elements with #ahah[path] and
+ * #ahah[wrapper] properties. If set, this file will automatically be included
+ * to provide AHAH capabilities.
+ */
+
+/**
+ * Attaches the ahah behavior to each ahah form element.
+ */
+Drupal.behaviors.ahah = function(context) {
+  for (var base in Drupal.settings.ahah) {
+    if (!$('#'+ base + '.ahah-processed').size()) {
+      var element_settings = Drupal.settings.ahah[base];
+
+      $(element_settings.selector).each(function() {
+        element_settings.element = this;
+        var ahah = new Drupal.ahah(base, element_settings);
+      });
+
+      $('#'+ base).addClass('ahah-processed');
+    }
+  }
+};
+
+/**
+ * AHAH object.
+ */
+Drupal.ahah = function(base, element_settings) {
+  // Set the properties for this object.
+  this.element = element_settings.element;
+  this.selector = element_settings.selector;
+  this.event = element_settings.event;
+  this.keypress = element_settings.keypress;
+  this.url = element_settings.url;
+  this.wrapper = '#'+ element_settings.wrapper;
+  this.effect = element_settings.effect;
+  this.method = element_settings.method;
+  this.progress = element_settings.progress;
+  this.button = element_settings.button || { };
+
+  if (this.effect == 'none') {
+    this.showEffect = 'show';
+    this.hideEffect = 'hide';
+    this.showSpeed = '';
+  }
+  else if (this.effect == 'fade') {
+    this.showEffect = 'fadeIn';
+    this.hideEffect = 'fadeOut';
+    this.showSpeed = 'slow';
+  }
+  else {
+    this.showEffect = this.effect + 'Toggle';
+    this.hideEffect = this.effect + 'Toggle';
+    this.showSpeed = 'slow';
+  }
+
+  // Record the form action and target, needed for iFrame file uploads.
+  var form = $(this.element).parents('form');
+  this.form_action = form.attr('action');
+  this.form_target = form.attr('target');
+  this.form_encattr = form.attr('encattr');
+
+  // Set the options for the ajaxSubmit function.
+  // The 'this' variable will not persist inside of the options object.
+  var ahah = this;
+  var options = {
+    url: ahah.url,
+    data: ahah.button,
+    beforeSubmit: function(form_values, element_settings, options) {
+      return ahah.beforeSubmit(form_values, element_settings, options);
+    },
+    success: function(response, status) {
+      // Sanity check for browser support (object expected).
+      // When using iFrame uploads, responses must be returned as a string.
+      if (typeof(response) == 'string') {
+        response = Drupal.parseJson(response);
+      }
+      return ahah.success(response, status);
+    },
+    complete: function(response, status) {
+      if (status == 'error' || status == 'parsererror') {
+        return ahah.error(response, ahah.url);
+      }
+    },
+    dataType: 'json',
+    type: 'POST'
+  };
+
+  // Bind the ajaxSubmit function to the element event.
+  $(element_settings.element).bind(element_settings.event, function() {
+    $(element_settings.element).parents('form').ajaxSubmit(options);
+    return false;
+  });
+  // If necessary, enable keyboard submission so that AHAH behaviors
+  // can be triggered through keyboard input as well as e.g. a mousedown
+  // action.
+  if (element_settings.keypress) {
+    $(element_settings.element).keypress(function(event) {
+      // Detect enter key.
+      if (event.keyCode == 13) {
+        $(element_settings.element).trigger(element_settings.event);
+        return false;
+      }
+    });
+  }
+};
+
+/**
+ * Handler for the form redirection submission.
+ */
+Drupal.ahah.prototype.beforeSubmit = function (form_values, element, options) {
+  // Disable the element that received the change.
+  $(this.element).addClass('progress-disabled').attr('disabled', true);
+
+  // Insert progressbar or throbber.
+  if (this.progress.type == 'bar') {
+    var progressBar = new Drupal.progressBar('ahah-progress-' + this.element.id, eval(this.progress.update_callback), this.progress.method, eval(this.progress.error_callback));
+    if (this.progress.message) {
+      progressBar.setProgress(-1, this.progress.message);
+    }
+    if (this.progress.url) {
+      progressBar.startMonitoring(this.progress.url, this.progress.interval || 1500);
+    }
+    this.progress.element = $(progressBar.element).addClass('ahah-progress ahah-progress-bar');
+    this.progress.object = progressBar;
+    $(this.element).after(this.progress.element);
+  }
+  else if (this.progress.type == 'throbber') {
+    this.progress.element = $('<div class="ahah-progress ahah-progress-throbber"><div class="throbber">&nbsp;</div></div>');
+    if (this.progress.message) {
+      $('.throbber', this.progress.element).after('<div class="message">' + this.progress.message + '</div>');
+    }
+    $(this.element).after(this.progress.element);
+  }
+};
+
+/**
+ * Handler for the form redirection completion.
+ */
+Drupal.ahah.prototype.success = function (response, status) {
+  var wrapper = $(this.wrapper);
+  var form = $(this.element).parents('form');
+  // Manually insert HTML into the jQuery object, using $() directly crashes
+  // Safari with long string lengths. http://dev.jquery.com/ticket/1152
+  var new_content = $('<div></div>').html(response.data);
+
+  // Restore the previous action and target to the form.
+  form.attr('action', this.form_action);
+  this.form_target ? form.attr('target', this.form_target) : form.removeAttr('target');
+  this.form_encattr ? form.attr('target', this.form_encattr) : form.removeAttr('encattr');
+
+  // Remove the progress element.
+  if (this.progress.element) {
+    $(this.progress.element).remove();
+  }
+  if (this.progress.object) {
+    this.progress.object.stopMonitoring();
+  }
+  $(this.element).removeClass('progress-disabled').attr('disabled', false);
+
+  // Add the new content to the page.
+  Drupal.freezeHeight();
+  if (this.method == 'replace') {
+    wrapper.empty().append(new_content);
+  }
+  else {
+    wrapper[this.method](new_content);
+  }
+
+  // Immediately hide the new content if we're using any effects.
+  if (this.showEffect != 'show') {
+    new_content.hide();
+  }
+
+  // Determine what effect use and what content will receive the effect, then
+  // show the new content.
+  if ($('.ahah-new-content', new_content).size() > 0) {
+    $('.ahah-new-content', new_content).hide();
+    new_content.show();
+    $(".ahah-new-content", new_content)[this.showEffect](this.showSpeed);
+  }
+  else if (this.showEffect != 'show') {
+    new_content[this.showEffect](this.showSpeed);
+  }
+
+  // Attach all javascript behaviors to the new content, if it was successfully
+  // added to the page, this if statement allows #ahah[wrapper] to be optional.
+  if (new_content.parents('html').length > 0) {
+    Drupal.attachBehaviors(new_content);
+  }
+
+  Drupal.unfreezeHeight();
+};
+
+/**
+ * Handler for the form redirection error.
+ */
+Drupal.ahah.prototype.error = function (response, uri) {
+  alert(Drupal.ahahError(response, uri));
+  // Resore the previous action and target to the form.
+  $(this.element).parent('form').attr( { action: this.form_action, target: this.form_target} );
+  // Remove the progress element.
+  if (this.progress.element) {
+    $(this.progress.element).remove();
+  }
+  if (this.progress.object) {
+    this.progress.object.stopMonitoring();
+  }
+  // Undo hide.
+  $(this.wrapper).show();
+  // Re-enable the element.
+  $(this.element).removeClass('progess-disabled').attr('disabled', false);
+};
+;/**/
