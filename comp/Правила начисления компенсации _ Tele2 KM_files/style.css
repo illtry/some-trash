@@ -1,0 +1,934 @@
+/*
+	$Id: style.css,v 1.1.4.6 2008/08/03 23:14:53 couzinhub Exp $
+	Abarre, for Drupal 6
+	Hubert Florin at Raincity Studios
+	www.raincitystudios.com 
+*/
+
+/*------------------------------------
+						Reset CSS 
+------------------------------------*/
+
+* {
+	margin:0;
+	padding:0;
+}
+
+/*------------------------------------
+				Colors for color module
+------------------------------------*/
+
+/* text main */
+#main{
+	color:#545454;
+}
+/* lighter text main */
+#main .node .submitted{
+	color:#868686;
+}
+/* text titles main */
+#main h1,
+#edit-title,
+#user-login-form .form-item label {
+	color:#737063;
+}
+/* Links all */
+a, a:link, a:visited, #site-slogan{
+	color:#000081;
+}
+#main .links li.comment_add a,
+#main .links li.comment_comments a,
+#main .links li.comment_edit a,
+#main .links li.comment_delete a,
+#main .links li.comment_reply a{
+	background-color:#000081;
+}
+/* Links all hover */
+a:hover, a:active{
+	color:#0c0c3e;
+}
+
+#main .links ul li.comment_add a:hover,
+#main .links ul li.comment_comments a:hover,
+#main .links ul li.comment_edit a:hover,
+#main .links ul li.comment_delete a:hover,
+#main .links ul li.comment_reply a:hover{
+	background-color:#0c0c3e;
+}
+
+/* colors sidebar */
+
+/* Text Sidebar */
+#sidebar-left .km_region, 
+#sidebar-right .km_region, 
+#sidebar-top .km_region,
+#sidebar-right-top-header .km_region {
+	background-color:#addbe8;
+}
+
+#simplemenu li.expanded a, #simplemenu li.expanded ul li.expanded a{
+	background-color:#addbe8 !important;
+}
+
+#simplemenu,
+#simplemenu li,
+#simplemenu li a,
+#simplemenu li.expanded ul li a,
+#simplemenu li.expanded  ul li.expanded ul li a,
+#simplemenu li.expanded ul li.expanded ul li ul li a{
+	background-color:#addbe8 !important;
+}
+
+.sf-menu.sf-style-oldblue li, .sf-menu.sf-style-oldblue.sf-navbar {
+    background-color: #addbe8;
+}
+
+.sf-menu.sf-style-oldblue li li {
+    background-color: #addbe8;
+}
+
+.sf-menu.sf-style-oldblue li li li {
+    background-color: #addbe8;
+}
+
+tr.odd, tr.info {
+	background-color: #ecfef3;
+}
+
+tr.even, tr.odd, tbody th {
+	border-bottom: #ecfef3 1px solid;
+	border-top: #ecfef3 1px solid;
+}
+
+tr.odd td.active {
+	background-color: #addbe8;
+}
+
+tr.even td.active {
+	background-color: #ecfef3;
+}
+
+#simplemenu li a:focus,
+#simplemenu li a:hover, 
+#simplemenu li a:active,
+#simplemenu li.expanded ul li a:focus, 
+#simplemenu li.expanded ul li a:hover, 
+#simplemenu li.expanded ul li a:active,
+#simplemenu li.expanded ul li.expanded ul li a:focus,
+#simplemenu li.expanded ul li.expanded ul li a:hover,
+#simplemenu li.expanded ul li.expanded ul li a:active,
+#simplemenu li.expanded ul li.expanded ul li ul li a:focus,
+#simplemenu li.expanded ul li.expanded ul li ul li a:hover,
+#simplemenu li.expanded ul li.expanded ul li ul li a:active{
+	color:#000000;
+	background-color:#9b9b9b !important;
+}
+
+#block-km_cr-km_cr .title,
+#block-km_cr-km_cr .title table tr.even, 
+#block-km_cr-km_cr .title table tr, 
+#block-km_cr-km_cr .title table td, 
+#block-km_cr-km_cr .title table tr.odd {
+	border:1px #addbe8 solid !important;
+	background-color:#addbe8 !important;
+}
+
+#block-km_actions-1 {
+	border:1px #addbe8 solid !important;
+	background-color:#addbe8 !important;
+}
+
+.boxy-wrapper .title-bar {
+	background-color:#addbe8 !important;
+}
+
+#sidebar-left .content,
+#sidebar-right .content,
+#sidebar-top .content,
+#sidebar-right-top-header .content {
+	color:#4f4f4f;
+}
+/* Links menu Sidebar */
+#sidebar-left ul ul li a,
+#sidebar-left ul ul ul li a,
+#sidebar-left .links li a.active, 
+#sidebar-left  .links li a:hover,
+#sidebar-top ul ul li a,
+#sidebar-top ul ul ul li a,
+#sidebar-top .links li a.active, 
+#sidebar-top  .links li a:hover,
+#sidebar-right-top-header ul ul li a,
+#sidebar-right-top-header ul ul ul li a,
+#sidebar-right-top-header .links li a.active,
+#sidebar-right-top-header .links li a:hover{
+	color:#000081;
+}
+#sidebar-right-slide .km_region {
+  background-color: #a9d2dc;
+}
+/* Links Sidebar hover */
+#sidebar-left a:hover,
+#sidebar-left ul ul li a:hover, 
+#sidebar-left ul ul li a.active,
+#sidebar-left ul ul ul li a:hover, 
+#sidebar-left ul ul ul li a.active,
+#sidebar-top a:hover,
+#sidebar-top ul ul li a:hover, 
+#sidebar-top ul ul li a.active,
+#sidebar-top ul ul ul li a:hover, 
+#sidebar-top ul ul ul li a.active,
+#sidebar-right-top-header a:hover,
+#sidebar-right-top-header ul ul li a:hover,
+#sidebar-right-top-header ul ul li a.active,
+#sidebar-right-top-header ul ul ul li a:hover,
+#sidebar-right-top-header ul ul ul li a.active{
+	color:#0c0c3e;
+}
+#sidebar-left li a.active,
+#sidebar-left h2.title,
+#sidebar-left ul li,
+#sidebar-left .links li a,
+#sidebar-top li a.active,
+#sidebar-top h2.title,
+#sidebar-top ul li,
+#sidebar-top .links li a,
+#sidebar-right-top-header li a.active,
+#sidebar-right-top-header h2.title,
+#sidebar-right-top-header ul li,
+#sidebar-right-top-header .links li a { 
+	color:#282828;
+}
+#sidebar-left tr, #sidebar-left td, #sidebar-top td, #sidebar-right-top-header td {
+	border-bottom:1px solid #7d6a6a;
+}
+
+#footer {
+  border-top: 0.5em solid #7d6a6a;
+  padding: 0.5em;
+}
+
+/* Nodeactions bar  */
+.action-links {
+  border-top: 0.5em solid #7d6a6a;
+  border-bottom: 1px solid #7d6a6a;
+}
+
+#main .node-type-subtitle {
+  color: #868686;
+}
+
+/* Table */
+tr.even {
+  background-color: #ffffff;
+}
+
+/***************************
+* KM Colors
+****************************/
+#content-header div.tabs {
+  border-color: #7d6a6a;
+}
+
+ul.tabs.primary li.active a {
+  background-color:#ffffff;
+}
+
+ul.tabs.primary li a{
+  border-color:#7d6a6a;
+  background-color: #cfe1d6;
+}
+
+span.marker {
+  color: #ffffff;
+  background-color: #f20202;
+}
+
+.view-footer,
+.view-header {
+  background-color: #bad4c4;
+}
+
+.km_region {
+  border: #7d6a6a 1px solid;
+  background-color: #ffffff;
+}
+
+.km_region.cSelected{
+  background-color: #e7f0ea;
+  border: #ff1616 1px solid;
+}
+
+.km_region_footer  {
+  border-top: #7d6a6a 1px solid;
+}
+
+.block-km_userui .qSelected { 
+  background-color: #ff1515;
+}
+
+#synonims {
+  border-bottom: #7d6a6a 1px solid;
+  color: #737063;
+}
+
+#cr .cr_even { background-color: #e7f0ea; cursor: pointer;}
+#cr .cr_odd {background-color: #ffffff; cursor: pointer;}
+
+#solution .solution_sidebars{
+  border-bottom: #7d6a6a 0.5em solid;
+}
+
+#solution #solution_actions{
+  border-top: #7d6a6a 0.5em solid;
+}
+
+.upsale .upsale_item_body {
+  border: #9b9b9b 1px solid;
+  background-color: #ffffff;
+}
+
+.upsale .upsale_item_header {
+  background-color: #e7f0ea;
+  border: #9b9b9b 1px solid;
+}
+
+#tp_upsale .upsale_item_header {
+  background-color: #95bea5;
+}
+
+fieldset.decisiontree {
+  border: #bad4c4 1px solid;
+}
+
+#content fieldset.decisiontree.lastSection {
+  border: #bad4c4 4px solid;
+}
+
+#block-km_cr-km_cr {
+  background-color:#ffffff;
+}
+
+#block-km_cr-km_cr .title  {
+	background-color: #e7f0ea;
+	border: #7d6a6a 1px solid;
+}
+
+#block-km_cr-km_cr .content{
+  border: #7d6a6a 1px solid; 
+}
+
+#block-km_cr-km_cr .title.hasCRs {
+  background: Orange;
+}
+
+#cr_log_buttons{
+  background-color: #e7f0ea;
+}
+
+#block-km_cr-km_cr .kmTabs ul.idTabs li a {
+	background:#eaeaea none repeat scroll 0 0;
+	border:#bad4c4 1px solid;
+}
+
+#block-km_cr-km_cr .kmTabs ul.idTabs li a.selected {
+	background:#ffffff;
+	color:#000000;
+}
+
+#block-km_cr-km_cr .kmTabs .tabcontent {
+  border-top: #bad4c4 1px solid;
+}
+
+#customer_phone tr.odd{
+  background-color: #ffffff;
+}
+
+td.incident-label {
+  color: #494949;
+}
+
+#smsFormHeader {
+  border: 1px solid #181818;
+}
+
+#smsTemplateList {
+  border: #181818 1px solid;
+}
+
+#smsTemplateList  li:hover,
+#smsTemplateList  li.selected {
+  background-color: LightBlue;
+}
+
+.send-sms-form{
+  background-color: #ffffff;
+}
+
+#chooseTemplateCategory li {
+  border: #181818 1px solid;
+}
+
+#chooseTemplateCategory li.active {
+  background-color: #bad4c4;
+}
+
+#edit-message {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+
+/*******************************************************************
+*                                        *
+*******************************************************************/
+
+/*------------------------------------
+						General Layout 
+------------------------------------*/
+
+body{
+	font-family:"trebuchet ms",arial,sans-serif;
+	font-size: 14px;
+	min-width: 800px;
+	max-width: 1300px;
+  background-color: White;
+  margin: 0 auto;
+}
+
+/* table */
+thead th {
+  border-bottom: 3px solid #747163;
+}
+tr, td {
+  border-bottom: 1px solid #747163;
+}
+
+table caption {
+  text-align: left;
+  font-weight: bold;
+  margin: 1em 0 0.5em;
+  font-size: 1.2em;
+}
+
+#header{
+	position:relative;
+	margin:0 auto;
+	padding-bottom:10px;
+}
+
+#logo {
+  width: 70px;
+}
+
+#header-left,
+#header-right {
+  vertical-align: top;
+}
+
+#header-right {
+  width: 215px;
+}
+
+#content-table {
+}
+
+table #linkbar-tr td {
+  padding: 0;
+}
+
+#main{
+	padding:0 0.5em;
+}
+
+#content-main {
+  vertical-align: top;
+	margin-bottom:20px;
+	min-height:450px;
+  padding: 0;
+}
+
+#content-header {
+  margin: 0 0 1em 0;
+}
+
+#sidebar-right,
+#sidebar-left {
+  vertical-align: top;
+	width:215px;
+  padding: 0 9px 0 0;
+}
+
+#sidebar-right {
+  padding: 0 0 0 9px;
+}
+
+#content-table-tr,
+#sidebar-left,
+#sidebar-right,
+#content {
+  border: none;
+}
+
+#footer{
+	height:45px;
+	clear:both;
+	margin:1em 0 2em 0;
+}
+
+/* devel info special formatting */
+#footer pre {
+  font-size: 11px;
+  color: #999;
+}
+
+/*------------------------------------
+						Header Design
+------------------------------------*/
+
+#header h1 a{
+	font-size:1.3em;
+	text-decoration: none;
+}
+/*------------------------------------
+						Sidebar Design 
+------------------------------------*/
+
+.km_region.cSelected {
+	background-color:#ffd782 !important;
+}
+
+#sidebar-right a,
+#sidebar-left a{
+	text-decoration: none;
+}
+#sidebar-right .block,
+#sidebar-left .block{
+	margin:10px 0 20px 0;
+	padding:0 0 0 15px;
+  border-top: 1px dotted #ccc;
+}
+#sidebar-right h2.title,
+#sidebar-left h2.title{
+	margin:6px 7px 0 0;
+	font-size:1.2em;
+}
+#sidebar-right .node,
+#sidebar-left .node{
+	padding-bottom:10px;
+	border-bottom:1px solid #FFFFFF;
+	margin-bottom:15px;
+}
+#sidebar-right .node h2.title,
+#sidebar-left .node h2.title{
+	float:none;
+}
+#sidebar-right ul,
+#sidebar-left ul{
+	padding:0;
+	margin:5px 0 5px 0;
+	text-align:left;
+}
+#sidebar-right ul li,
+#sidebar-left ul li {
+	list-style:none;
+	list-style-image:none;
+	padding:0 0 3px;
+}
+#sidebar-right ul li a,
+#sidebar-left ul li a{
+	padding-right:20px;
+	margin-right:-18px;
+}
+#sidebar-right ul ul li a,
+#sidebar-left ul ul li a{
+	font-size:0.9em;
+}
+#sidebar-right ul li a.active,
+#sidebar-left ul li a.active{
+	font-weight:bold;
+}
+#sidebar-right ul ul,
+#sidebar-left ul ul{
+	margin:5px 0;
+}
+#sidebar-right ul ul ul,
+#sidebar-left ul ul ul{
+	font-size:0.95em;
+	margin-right:20px;
+	padding-bottom:10px;
+}
+#sidebar-right .block .content,
+#sidebar-left .block .content{
+	margin:0;
+	padding:10px 18px 0 0;
+}
+#sidebar-right tr.even,
+#sidebar-left tr.even{
+	background-color:transparent;
+}
+
+/* --------- Login ---------- */
+
+#sidebar-left #block-user-0{
+	padding:0 0 10px 0px;
+}
+#user-login-form{
+	padding:5px 0;
+	text-align:right;
+}
+#user-login-form .form-item, #user-login-form #edit-submit{
+	margin:5px 0 0 10px;
+}
+#user-login-form .form-item label{
+	font-size:0.9em;
+	margin-left:40px;
+	float:left;
+}
+#user-login-form .item-list{
+	margin-top:10px;
+}
+
+/*------------------------------------
+						Main Content Design 
+------------------------------------*/
+
+div#mission{
+	color:#a2a198;
+}
+div#mission,
+#main .content blockquote{
+	border-right:1px solid #deded9;
+	border-left:1px solid #deded9;
+}
+.feed-icon{
+	float:right;
+}
+.breadcrumb {
+	padding:0;
+	margin:10px 0 0 0;
+}
+#main .links li{
+	padding-left:0;
+	margin-left:0;
+	background: none;
+}
+#main .content p, #main .node .content{
+	font-family:arial,sans-serif;
+	line-height:1.55em;
+}
+#main .content p{
+	margin-bottom:10px;
+}
+#main h1{
+	text-transform:capitalize;
+  font-size: 2em;
+}
+#main a{
+	text-decoration:none;
+}
+#main a:hover{
+	text-decoration:underline;
+}
+
+div#mission{
+	font: italic 110% georgia, times, serif;
+	line-height:1.5em;
+	padding:20px;
+	margin:20px 0;
+}
+.content ul, .content ol{
+	margin:0 0 20px 20px;
+}
+#main .content ul ul, #main .content ol ol,
+#main .content ul ol, #main .content ol ul{
+	margin-bottom:0;
+}
+dl dt{
+	font-weight:bold;
+}
+dl dd{
+	margin-left:10px;
+	font-style:italic;
+}
+#main .content hr{
+	border:1px dotted #ccc;
+	margin-bottom:10px;
+}
+#main .content blockquote{
+	font-style:italic;
+	padding:10px;
+	margin:20px 50px;
+}
+
+/*------- blog post and story ----------*/
+
+#main .node{
+	margin:0 0 20px;
+	padding-bottom:30px;
+	border-bottom:1px dotted #CCCCCC;
+}
+
+#main .node-type-subtitle {
+  line-height: 100%;
+  margin: -0.3em 0 1em 0;
+}
+
+#main .node h2 a{
+	font-size:120%;
+}
+#main .node h2 a:hover,
+#main .node .links a:hover{
+	text-decoration:none;
+}
+#main .node .submitted{
+	display:block;
+	font-size:80%;
+}
+#main .node .links ul,
+#main #comments .links ul{
+	display:block;
+	margin-top:10px;
+}
+#main .node .links ul li,
+#main #comments ul li{
+	margin:0 10px 0 0;
+}
+
+/*-------------- icons----------- */
+
+#main .links ul li.comment_add a:hover,
+#main .links ul li.comment_comments a:hover,
+#main .links li.comment_add a,
+#main .links li.comment_comments a,
+#main .links ul li.comment_edit a:hover,
+#main .links li.comment_edit a,
+#main .links ul li.comment_delete a:hover,
+#main .links li.comment_delete a,
+#main .links ul li.comment_reply a:hover,
+#main .links li.comment_reply a{
+	background-repeat:no-repeat;
+	background-position:top left;
+}
+#main .links ul li.comment_add a:hover,
+#main .links ul li.comment_comments a:hover{
+	background-image: url(/themes/km_remote_big/images/comment.gif);
+}
+#main .links li.comment_add a,
+#main .links li.comment_comments a{
+	height:9px;
+	padding:0 0 0 13px;
+	background-image: url(/themes/km_remote_big/images/comment.gif);
+}
+#main .links ul li.comment_edit a:hover{
+	background-image: url(/themes/km_remote_big/images/edit.gif);
+}
+#main .links li.comment_edit a{
+	height:9px;
+	padding:0 0 0 13px;
+	background-image: url(/themes/km_remote_big/images/edit.gif);
+}
+#main .links ul li.comment_delete a:hover{
+	background-image: url(/themes/km_remote_big/images/delete.gif);
+}
+#main .links li.comment_delete a{
+	height:9px;
+	padding:0 0 0 13px;
+	background-image: url(/themes/km_remote_big/images/delete.gif);
+}
+#main .links ul li.comment_reply a:hover{
+	background-image: url(/themes/km_remote_big/images/reply.gif);
+}
+#main .links li.comment_reply a{
+	height:9px;
+	padding:0 0 0 13px;
+	background-image: url(/themes/km_remote_big/images/reply.gif);
+}
+
+/*---------- Comments ------------*/
+
+.submitted{
+	color:#989898;
+	margin-bottom:10px;
+	font-size:80%;
+}
+.submitted img{
+	width:15px;
+	margin-right:5px;
+}
+.comment{
+	border-bottom:1px dotted #CCC;
+	padding-bottom:15px;
+	margin:10px 0 20px;
+}
+span.new{
+	color:#FFFFFF;
+	margin-right:10px;
+	background-color:#c00;
+	padding:0 5px;
+}
+
+/*---------- interface design ------------*/
+
+#main tr.odd .form-item, #main tr.even .form-item{
+	margin:8px 0;
+}
+.theme-settings-bottom, .profile, .node-form .standard{
+	clear:none;
+}	
+.theme-settings-left, .theme-settings-right{
+	float:none;
+}
+table{
+	width:99%;
+  margin: 0 auto;
+}
+table tr {
+  vertical-align: baseline;
+}
+table td {
+  padding: 0 0.5em;
+}
+table td.td-bold {
+  font-weight: bold;
+}
+.messages, .status{
+	color:#00A400;
+  list-style-position: inside;
+  margin: 0.5em 0;
+  border-bottom: #00A400 1px solid;
+}
+
+
+/**
+ * Local tasks
+ */
+div.tabs{
+}
+
+ul.tabs{
+	text-align:center;
+	background-color:#FFFFFFFFF;
+	padding:0;
+  margin: 0;
+	/* border:5px solid #c00; */
+}
+
+.tabs .tabs li{
+  float: left;
+}
+
+ul.secondary {
+  clear: both;
+  text-align: left; /* LTR */
+  border-bottom: 1px solid #e9eff3;
+  margin: -0.2em -26px 1em;
+  padding: 0 26px 0.6em;
+}
+
+ul.primary li a{
+	font-size:14px;
+	background-color:transparent;
+	border:none;
+	margin:0;
+	display:block;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+ul.primary li.active a{
+	border:none;
+	background-color:#cdd;
+}
+
+.node-form textarea{
+	width:97%;
+	color:#545454;
+	font:14px/1.6em arial,sans-serif;
+}
+
+/* misc */
+
+.node-form .form-item label{
+	font-size:16px;
+	padding:3px 10px;
+	display:table;
+}
+#edit-title{
+	font:bold 22px "trebuchet ms",arial,sans-serif;
+	padding:3px 10px;
+}
+fieldset {
+	width:95%;
+	background-color:#FFFFFF;
+}
+fieldset.collapsed{
+	background-color:transparent;
+}
+.profile img{
+	float:right;
+}
+
+/*------------------------------------
+						Footer Design 
+------------------------------------*/
+
+#footer .block{
+	float: left;
+}
+
+/* Element styles */
+/* taxonomy in node view screen */
+.taxonomy_table {
+  margin-bottom: 1em;
+}
+/* taxonomy in node entry form */
+.taxonomy-fieldset {
+  clear: both;
+}
+
+.taxonomy-fieldset .form-item {
+  float: left;
+  padding: 0 2em;
+}
+
+/* View styles */
+table.views-table caption {
+  text-align: left;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 3em 0 .5em 0;
+}
+
+/* Some IE7 extras */
+.form-select {
+  font-size: 12px;
+}
+
+/* Inline list */
+.item-list ul.inline {
+  padding: 0;
+  margin: 0;
+} 
+.item-list ul.inline li {
+  display: inline;
+  margin: 0 .5em 0 0;
+}
+
+/* Node style - TOBE moved to style */
+span.marker {
+  padding: 0 3px;
+}
+
+/* Solution area formatting */
+#solution_area {
+  overflow: auto;
+  height: 600px;
+  max-height: 600px;
+  border:1px solid #CCCCCC;
+  margin: 3px 0;
+}
+
+#cr .cr_even,
+.upsale #global_upsale .upsale_item_header {
+  background-color:#e1dbc2 !important;
+}

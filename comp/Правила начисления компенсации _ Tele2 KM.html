@@ -1,0 +1,652 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0033)http://kmumb.tele2.ru/fact/266661 -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" dir="ltr" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="./Правила начисления компенсации _ Tele2 KM_files/801134f121"></script><script src="./Правила начисления компенсации _ Tele2 KM_files/nr-1071.min.js.Без названия"></script><script type="text/javascript" async="" src="./Правила начисления компенсации _ Tele2 KM_files/watch.js.Без названия"></script><script async="" src="./Правила начисления компенсации _ Tele2 KM_files/analytics.js.Без названия"></script><script async="" src="./Правила начисления компенсации _ Tele2 KM_files/analytics.js.Без названия"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+  <title>Правила начисления компенсации | Tele2 KM</title>
+  
+<link rel="shortcut icon" href="http://kmumb.tele2.ru/themes/km_remote_big/favicon.ico" type="image/x-icon">
+  <link type="text/css" rel="stylesheet" media="all" href="./Правила начисления компенсации _ Tele2 KM_files/css_0a07c0c302bc56512b5186c49c54888c_0.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Правила начисления компенсации _ Tele2 KM_files/css_33bc7f76545573a04d6fc1ba8875f0be_0.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Правила начисления компенсации _ Tele2 KM_files/css_afa2fbab9da6afd2163289be8fcf70e6_1.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Правила начисления компенсации _ Tele2 KM_files/css_c7f007b0ed4da252e7c4ddca2af901a4_0.css">
+<link type="text/css" rel="stylesheet" media="all" href="./Правила начисления компенсации _ Tele2 KM_files/style.css">
+  <script type="text/javascript" src="./Правила начисления компенсации _ Tele2 KM_files/js_f20059f9b34a08ced62bf2a20ddcc395_1.js.Без названия"></script>
+<script type="text/javascript" src="./Правила начисления компенсации _ Tele2 KM_files/js_4054353038749339362e7b2754fb6fc6_0.js.Без названия"></script>
+<script type="text/javascript" src="./Правила начисления компенсации _ Tele2 KM_files/js_8e7b93347672cf2f21820c731f77efce_5.js.Без названия"></script>
+<script type="text/javascript" src="./Правила начисления компенсации _ Tele2 KM_files/js_a780c39ec95476fbd169a8899285cf8c_4.js.Без названия"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","jstools":{"cleanurls":true,"basePath":"\/"},"collapsiblock":{"blocks":{"block-km_userui-taxonomy-none-8":"3","block-km_userui-taxonomy-main-9":"3","block-km_userui-taxonomy-none-7":"1","block-km_cr-km_cr":"1","block-km_userui-taxonomy-main-7":"3","block-views-incidents-block_1":"1","block-views-incidents_adv-block_1":"1","block-devel-2":"1","block-views-new_knowledge-block_2":"1","block-views-new_knowledge-block_1":"1","block-km_userui-taxonomy-sub-1":"1","block-km_userui-taxonomy-sub-4":"1","block-km_userui-taxonomy-none-9":"3","block-km_userui-taxonomy-none-6":"3","block-km_userui-taxonomy-none-25":"3","block-km_userui-jump_nav":"1","block-masquerade-0":"1","block-views-recent_feedback-block_1":"1","block-km_userui-taxonomy-main-1":"2","block-superfish-1":"1","block-km_incident-incident_informer":"1","block-km_userui-taxonomy-main-4":"1","block-views-news-block_1":"1","block-views-km_feedback-block_1":"1","block-views-km_feedback-block_2":"1","block-views-km_rfc-block_1":"1","block-views-km_rfc-block_2":"1","block-km_userui-type_client":"1","block-km_userui-ClearAll":"1","block-km_userui-client_info":"1","block-km_userui-taxonomy-none-31":"1","block-km_actions-1":"1","block-km_actions-3":"1"},"default_state":1,"slide_type":1,"slide_speed":200,"block_title":":header:first","block":"div.block","block_content":"div.content"},"simplemenu":{"effect":"none","effectSpeed":"fast","element":"#header-left","placement":"append","hideDelay":"200","detectPopup":0},"googleanalytics":{"trackOutbound":[1,1],"trackMailto":[1,1],"trackDownload":[1,1],"trackDownloadExtensions":["7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"]},"auto_send_mechanism":1,"km_sms":{"plength":"11","module_path":"\/sites\/all\/modules\/km\/km_sms","resolutionW":"1280","resolutionH":"1024","stack_phone":[],"jmptree_path":"\/sites\/all\/modules\/jmp_treeselect"},"ahah":{"edit-sms-send-button":{"url":"\/km_sms\/send_sms","event":"click","keypress":null,"wrapper":"send_sms_status","selector":"#edit-sms-send-button","effect":"none","method":"replace","progress":{"type":"throbber"},"button":{"op":"\u041e\u0442\u043f\u0440\u0430\u0432\u0438\u0442\u044c"}},"edit-sms-reload-button":{"url":"\/js\/km_sms\/load_templates","event":"click","keypress":null,"wrapper":"smsTemplateList","selector":"#edit-sms-reload-button","effect":"none","method":"replace","progress":{"type":"throbber"},"button":{"op":"\u041e\u0431\u043d\u043e\u0432\u0438\u0442\u044c \u0440\u0435\u0433\u0438\u043e\u043d"}},"edit-sms-mnp-checkbox":{"url":"\/js\/km_sms\/load_mnp","event":"click","keypress":null,"wrapper":"smsMnpList","selector":"#edit-sms-mnp-checkbox","effect":"none","method":"replace","progress":{"type":"throbber"},"button":false},"edit-tree-reload-button":{"url":"\/km_sms\/refresh_tree","event":"click","keypress":null,"wrapper":"chooseCategory","selector":"#edit-tree-reload-button","effect":"none","method":"replace","progress":{"type":"throbber"},"button":{"op":"Refresh tree"}}}});
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var simplemenu="\u003cdiv class=\"simplemenu-block\"\u003e\u003cul class=\"menu clear-block\" id=\"simplemenu\"\u003e\u003cli class=\"leaf first\" id=\"simplemenu-li-74\" title=\"\u041d\u0430\u0436\u043c\u0438\u0442\u0435 ESC \u0434\u043b\u044f \u0431\u044b\u0441\u0442\u0440\u043e\u0433\u043e \u043f\u0435\u0440\u0435\u0445\u043e\u0434\u0430 \u0432 \u0411\u0430\u0437\u0443 \u0417\u043d\u0430\u043d\u0438\u0439 \u0437\u0430\u0442\u0435\u043c \u0441\u043e\u0445\u0440\u0430\u043d\u0438\u0442\u044c\" \u003e\u003ca href=\"\/km\" title=\"\u041d\u0430\u0436\u043c\u0438\u0442\u0435 ESC \u0434\u043b\u044f \u0431\u044b\u0441\u0442\u0440\u043e\u0433\u043e \u043f\u0435\u0440\u0435\u0445\u043e\u0434\u0430 \u0432 \u0411\u0430\u0437\u0443 \u0417\u043d\u0430\u043d\u0438\u0439 \u0437\u0430\u0442\u0435\u043c \u0441\u043e\u0445\u0440\u0430\u043d\u0438\u0442\u044c\"\u003e\u0411\u0430\u0437\u0430 \u0417\u043d\u0430\u043d\u0438\u0439\u003c\/a\u003e\u003c\/li\u003e\n\u003cli class=\"leaf\" id=\"simplemenu-li-3729\" title=\"\" \u003e\u003ca href=\"\/kmnavigation\/archive_no_bulk\" title=\"\"\u003e\u0410\u0440\u0445\u0438\u0432\u003c\/a\u003e\u003c\/li\u003e\n\u003cli class=\"expanded\" id=\"simplemenu-li-7040\" title=\"\" \u003e\u003ca href=\"\/news_managment\"\u003e\u041d\u043e\u0432\u043e\u0441\u0442\u0438\u003c\/a\u003e\u003cul class=\"menu\" id=\"simplemenu-ul-7040\"\u003e\u003cli class=\"leaf first\" id=\"simplemenu-li-7201\" title=\"\" \u003e\u003ca href=\"\/news_managment\/all_news\" title=\"\"\u003e\u0412\u0441\u0435 \u043d\u043e\u0432\u043e\u0441\u0442\u0438\u003c\/a\u003e\u003c\/li\u003e\n\u003cli class=\"leaf last\" id=\"simplemenu-li-7202\" title=\"\" \u003e\u003ca href=\"\/news_managment\/archive_news\" title=\"\"\u003e\u0410\u0440\u0445\u0438\u0432 \u043d\u043e\u0432\u043e\u0441\u0442\u0435\u0439\u003c\/a\u003e\u003c\/li\u003e\n\u003c\/ul\u003e\u003c\/li\u003e\n\u003cli class=\"expanded\" id=\"simplemenu-li-1441\" title=\"\" \u003e\u003ca href=\"\/mypage\" title=\"\"\u003e\u0413\u043b\u0430\u0432\u043d\u0430\u044f\u003c\/a\u003e\u003cul class=\"menu\" id=\"simplemenu-ul-1441\"\u003e\u003cli class=\"leaf first\" id=\"simplemenu-li-1719\" title=\"\" \u003e\u003ca href=\"\/collab\" title=\"\"\u003e\u0424\u043e\u0440\u0443\u043c\u003c\/a\u003e\u003c\/li\u003e\n\u003cli class=\"leaf last\" id=\"simplemenu-li-1904\" title=\"\" \u003e\u003ca href=\"\/myfeedback_list\" title=\"\"\u003e\u041c\u043e\u0438 \u043f\u0440\u0435\u0434\u043b\u043e\u0436\u0435\u043d\u0438\u044f\u003c\/a\u003e\u003c\/li\u003e\n\u003c\/ul\u003e\u003c\/li\u003e\n\u003cli class=\"leaf last\" id=\"simplemenu-li-1442\" title=\"\" \u003e\u003ca href=\"\/logout\" title=\"\"\u003e\u0412\u044b\u0445\u043e\u0434\u003c\/a\u003e\u003c\/li\u003e\n\u003c\/ul\u003e\u003c\/div\u003e";
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i.GoogleAnalyticsObject=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","UA-108070844-1",{cookieDomain:"auto",siteSpeedSampleRate:10});ga("set","anonymizeIp",true);ga("send","pageview");
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i.GoogleAnalyticsObject=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","UA-108070844-1",{cookieDomain:"auto",siteSpeedSampleRate:10});ga("set","anonymizeIp",true);ga("send","pageview");
+//--><!]]>
+</script>
+	<!--[if lte IE 6]>
+	  <style type="text/css" media="all">@import "/themes/km_remote_big/css/ie6.css";</style>
+	<![endif]-->
+	<!--[if IE 7]>
+  	<style type="text/css" media="all">@import "/themes/km_remote_big/css/ie7.css";</style>
+	<![endif]-->
+	<!--[if IE 8]>
+  	<style type="text/css" media="all">@import "/themes/km_remote_big/css/ie8.css";</style>
+	<![endif]-->
+
+</head>
+
+<body class="not-front logged-in page-fact node-type-advice no-sidebars i18n-ru simplemenu-enabled">
+    <div id="main">
+      <div class="main-header"></div>
+      <table id="header">
+        <tbody><tr id="header-tr">
+                      <td id="logo"><a href="http://kmumb.tele2.ru/" title="Главная">
+              <img src="./Правила начисления компенсации _ Tele2 KM_files/logo.png" alt="Главная">
+            </a></td>
+                    <td id="header-left">
+                                              <div class="simplemenu-block"><ul class="menu clear-block sf-js-enabled sf-shadow" id="simplemenu"><li class="leaf first" id="simplemenu-li-74" title="Нажмите ESC для быстрого перехода в Базу Знаний затем сохранить"><a href="http://kmumb.tele2.ru/km">База Знаний</a></li>
+<li class="leaf" id="simplemenu-li-3729" title=""><a href="http://kmumb.tele2.ru/kmnavigation/archive_no_bulk">Архив</a></li>
+<li class="expanded root" id="simplemenu-li-7040" title=""><a href="http://kmumb.tele2.ru/news_managment">Новости</a><ul class="menu" id="simplemenu-ul-7040" style="display: none; visibility: hidden;"><li class="leaf first" id="simplemenu-li-7201" title=""><a href="http://kmumb.tele2.ru/news_managment/all_news">Все новости</a></li>
+<li class="leaf last" id="simplemenu-li-7202" title=""><a href="http://kmumb.tele2.ru/news_managment/archive_news">Архив новостей</a></li>
+</ul></li>
+<li class="expanded root" id="simplemenu-li-1441" title=""><a href="http://kmumb.tele2.ru/mypage">Главная</a><ul class="menu" id="simplemenu-ul-1441" style="display: none; visibility: hidden;"><li class="leaf first" id="simplemenu-li-1719" title=""><a href="http://kmumb.tele2.ru/collab">Форум</a></li>
+<li class="leaf last" id="simplemenu-li-1904" title=""><a href="http://kmumb.tele2.ru/myfeedback_list">Мои предложения</a></li>
+</ul></li>
+<li class="leaf last" id="simplemenu-li-1442" title=""><a href="http://kmumb.tele2.ru/logout">Выход</a></li>
+</ul></div></td>
+                      <td id="header-right">
+              <div id="block-jmp_switchrole-0" class="block block-jmp_switchrole collapsiblock-processed">  
+    <h2 class="title" title=" Дмитриев Антон Константинович  Current role: Сотрудник ВО">&nbsp;</h2>
+    <div class="content"><div class="username"> <a href="http://kmumb.tele2.ru/user/210600">Дмитриев Антон Константинович</a> </div>
+      <div class="switchrole_user_roles"><h3 class="title">Roles:</h3><div class="item-list"><ul><li class="first"><span id="granted_role">Сотрудник ВО</span></li>
+<li><a href="http://kmumb.tele2.ru/switchrole/17?destination=fact%2F266661" class="other_user_role">Эксперт КЦ</a></li>
+<li><a href="http://kmumb.tele2.ru/switchrole/3?destination=fact%2F266661" class="other_user_role">Оператор КЦ</a></li>
+<li class="last"><a href="http://kmumb.tele2.ru/switchrole/2?destination=fact%2F266661" class="other_user_role">зарегистрированный пользователь</a></li>
+</ul></div></div>    </div>    
+</div>
+<div id="block-km_sms-sms-form" class="block block-km_sms collapsiblock-processed">  
+    <h2 class="title">  </h2>
+        
+</div>
+            </td>
+                  </tr>
+      </tbody></table>
+      <table id="content-table">
+                <colgroup><col width="auto">
+                </colgroup><tbody>
+        <tr id="linkbar-tr"><td colspan="3">
+          <div id="block-km_actions-1" class="block block-km_actions collapsiblock-processed">  
+    <h2 class="title">  </h2>
+    <div class="content">
+      <div class="item-list"><ul class="inline ruler-1"><li class="first"><a href="http://kmumb.tele2.ru/fact/261143" target="_blank" title="">Дайджесты Tele2</a> </li>
+<li><a href="http://kmumb.tele2.ru/fact/265620" target="_blank" title="">Каталог инструкций</a> </li>
+<li><a href="http://kmumb.tele2.ru/fact/5623" target="_blank" title="Номера сотрудников АС">0.1_Сотрудники АС</a> </li>
+<li><a href="http://kmumb.tele2.ru/fact/262923" target="_blank" title="">Сравнение тарифной линейки "Мой онлайн" с тарифом МТС "Мой безлимитище"</a> </li>
+<li><a href="http://kmumb.tele2.ru/fact/165011" target="_blank" title="Распределение регионов по КЦ и альянсам">0.3_Регионы по КЦ и альянсам</a> </li>
+<li><a href="http://10.77.47.43:8882/unica-wa/work.html" target="_blank" title="Управление услугой Новый номер">3_Новый номер</a> </li>
+<li><a href="http://ccmisc/support/getdate.html" target="_blank" title="Сроки доступности услуг. Если не работает, обращаться к ИТ КЦ.">4_Доступность услуг</a> </li>
+<li><a href="http://torus-maps.corp.tele2.ru/map-op1/" target="_blank" title="Карта покрытия сети">5.1_Карты Торус (Smart Gis)</a> </li>
+<li><a href="http://maps.yandex.ru/" target="_blank" title="Яндекс карты">5_Карты</a> </li>
+<li><a href="https://market.yandex.ru/catalog/54726/list?hid=91491&amp;amp;track=menuleaf&amp;amp;local-offers-first=0&amp;amp;deliveryincluded=0&amp;amp;onstock=1" target="_blank" title="Яндекс маркет (мобильные телефоны)">Яндекс Маркет </a> </li>
+<li><a href="http://kmumb.tele2.ru/fact/7241" target="_blank" title="Стоимость заказа контента">7_Стоимость контента</a> </li>
+<li><a href="http://kmumb.tele2.ru/km_smsnewbareform/0" class="smsnewWindow" target="smsnewWindow" title="Форма отправки SMS (ВО)">8. Отправка_SMS</a> </li>
+<li><a href="http://kmumb.tele2.ru/fact/263377" target="_blank" title="">Тестовые номера СМ </a> </li>
+<li><a href="http://bomnp.vas.tele2.ru/" target="_blank" title="Интерфейс для MNP">9_MNP</a> </li>
+<li><a href="http://kmumb.tele2.ru/doadvlink/587" target="_blank" title="Сайт Tele2 Россия">Сайт Tele2</a> </li>
+<li><a href="http://kmumb.tele2.ru/doadvlink/216560" target="_blank" title="Сайт Tele2 Россия">Сайт Tele2</a> </li>
+<li><a href="https://webdetail.nix.tele2.ru/" target="_blank" title="WEB-детализация">12_Детализация</a> </li>
+<li><a href="http://kmumb.tele2.ru/dokmaction/77531" target="_blank" title="Управление подписками абонентов">13.1_Подписки Tele2</a> </li>
+<li><a href="http://10.0.69.149:8080/" target="_blank" title="Управление подписками абонентов">13.2_Контент</a> </li>
+<li><a href="http://crm.corp.tele2.ru:8089/#/showSubscriptions" target="_blank" title="">13.3 Подписки CRM</a> </li>
+<li><a href="http://wap.tele2.ru/waptele2/userinfo/queue.jsp" target="_blank" title="Управление подписками абонентов">13.6_WAP-портал</a> </li>
+<li><a href="http://crmtrbl/Subscriber/Subscriber" target="_blank" title="Портал управления услугами">14 HLR(общий)</a> </li>
+<li><a href="http://www.numberingplans.com/" target="_blank" title="Международные коды мобильных телефонов">15_INP</a> </li>
+<li><a href="http://whois.tele2.ru/whois.html" target="_blank" title="Коды мобильных телефонов в РФ">17_Коды РФ</a> </li>
+<li><a href="https://www.kody.su/check-tel" target="_blank" title="">Принадлежность номера к оператору и факт MNP</a> </li>
+<li><a href="https://moscow.rt.ru/hometel/info/info-mh" target="_blank" title="Междугородные и международные коды телефонов">18.1_МГ/МН коды</a> </li>
+<li><a href="https://moscow.rt.ru/hometel/info/info-mh" target="_blank" title="Междугородные и международные коды телефонов">Коды стран и городов</a> </li>
+<li><a href="http://10.78.245.200/NiceApplications/Desktop/XbapApplications/NiceDesktop.xbap" target="_blank" title="Система оценки звонков в КЦ Ростова и Челябинска">20_Nice</a> </li>
+<li><a href="http://hrm.corp.tele2.ru/" target="_blank" title="Портал для обучения и тестирования">22_WebTutor(hrm)</a> </li>
+<li><a href="http://kmumb.tele2.ru/fact/2442" target="_blank" title="Внутренние номера в КЦ">23_AVAYA (номера КЦ)</a> </li>
+<li><a href="https://oms.shop.tele2.ru/login" target="_blank" title="Управление заказами в интернет-магазине">27_Интернет-магазин</a> </li>
+<li><a href="http://kmumb.tele2.ru/fact/77396" target="_blank" title="">База телефонов</a> </li>
+<li><a href="http://devicemgmt.corp.tele2.ru:8080/jsp/login/login.jsp" target="_blank" title="Портал отправки автоматических настроек для доступа в интернет">28_Device Management</a> </li>
+<li><a href="http://willmyphonework.net/" target="_blank" title="В каких сетях будет работать телефон">Стандарт в телефоне</a> </li>
+<li><a href="http://sd.corp.tele2.ru/0/ViewPage.aspx?Id=4e342d5e-bd89-4b79-98e2-22e433122403" target="_blank" title="Портал для управления заявками">30_BPM-5 </a> </li>
+<li><a href="http://bpm.tele2.ru/" target="_blank" title="Портал управления заявками">30.2_BPM-7</a> </li>
+<li><a href="http://10.78.47.195:10180/unica-wa/work.html" target="_blank" title="Управление услугой Антиспам">31_Антиспам SMS</a> </li>
+<li><a href="http://10.77.47.43:8877/unica-wa/work.html" target="_blank" title="Управление услугой Обещанный платеж для В2В">32_ОП B2B</a> </li>
+<li><a href="http://rostov.tele2.ru/help/coverage/" target="_blank" title="Карты зоны покрытия по всем операторам">33_Зона покрытия 2G/3G/4G</a> </li>
+<li><a href="http://rostov.tele2.ru/help/coverage/" target="_blank" title="Карты зоны покрытия по всем операторам">Зона покрытия 2G/3G/4G</a> </li>
+<li><a href="http://kmumb.tele2.ru/fact/77396" target="_blank" title="Ручные настройки телефонов">Настройки телефона</a> </li>
+<li><a href="http://kmumb.tele2.ru/fact/89845" target="_blank" title="Материалы для обучения">Обучение КЦ</a> </li>
+<li><a href="https://yandex.ru/map-constructor/location-tool/" target="_blank" title="Определение координат объекта на карте по его адресу">Яндекс координаты</a> </li>
+<li><a href="http://ccmisc/support/model.html" target="_blank" title="Введите IMEI телефона чтобы узнать модель">Узнать_модель_по_IMEI</a> </li>
+<li><a href="http://ccmisc/troubles/" target="_blank" title="Информационная база ОБО">База_знаний_группы_эскалации</a> </li>
+<li><a href="http://www.mobiset.ru/instructions/" target="_blank" title="Инструкции по использованию телефонов">Инструкции к телефонам</a> </li>
+<li><a href="http://reestr-dover.ru/" target="_blank" title="">Проверка доверенностей</a> </li>
+<li><a href="http://mail.mb-t2.ru/" target="_blank" title="Корпоративная почта">Почта Tele2</a> </li>
+<li><a href="http://t2wd.tele2.ru/t2wd/" target="_blank" title="Система Web Dealer (WD)">Web Dealer</a> </li>
+<li><a href="http://abc.tele2.ru/" target="_blank" title="Система обучения WebTutor (WT)">WebTutor(abc)</a> </li>
+<li><a href="http://kmumb.tele2.ru/fact/76609" target="_blank" title="Руководство пользователя к системе КМ. Рекомендуется к прочтению перед началом работы!">Инструкция_КМ</a> </li>
+<li><a href="http://umb/umbrella/action/clientsearch?callPage=true" target="_blank" title="Система обработки обращений в КЦ по телефону">Umbrella</a> </li>
+<li><a href="http://kmumb.tele2.ru/fact/243542" target="_blank" title="">Номера для перевода при неработающем "CallClient" </a> </li>
+<li><a href="http://crmcc.corp.tele2.ru:8080/Service/Remain/ShowRemains" target="_blank" title="Проверка остатки пакетов">Остатки в CRM</a> </li>
+<li><a href="http://kmumb.tele2.ru/fact/243701" target="_blank" title="Стандарты разговоров и скрипты по проблемам">Алгоритмы</a> </li>
+<li class="last"><a href="http://kmumb.tele2.ru/fact/246200" target="_blank" title="Популярные статьи для сотрудников Салонов и Модулей Tele2">Помощь и поддержка</a> </li>
+</ul></div>    </div>    
+</div>
+<div id="block-km_actions-5" class="block block-km_actions collapsiblock-processed">  
+    <h2 class="title">  </h2>
+    <div class="content">
+      <div class="item-list"></div>    </div>    
+</div>
+        </td></tr>
+        <tr id="content-table-tr">
+                <td id="content-main" colspan="3">
+          <div id="content-header" class="clear-block">
+          	                            	      <!-- <div class="breadcrumb"><a href="/">Главная</a></div> -->
+          	<h1 class="title">Правила начисления компенсации</h1>            <div class="node-type-subtitle">Совет (<span class="sid-8">Опубликован</span>)</div>                      </div>
+          		        <div id="sidebar-top">
+			          			          			          		        </div>
+	        	        <div class="content-wrapper">
+        		<div class="node workflow-8 node-advice" id="node-266661"><h2 class="title">Правила начисления компенсации</h2><table>
+<tbody>
+ <tr class="odd"><td>Cодержимое</td> </tr>
+ <tr class="even"><td><p><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">В звонке требуется компенсация проблемы, прямой запрос компенсации, требования абонента вернуть средства.</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">&nbsp;</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Проверить комментарии в UMB. Например: <strong>Компенсации не начислять!</strong></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">&nbsp;</span></p>
+<fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Комментарий есть</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">На этот номер нет возможности начислить компенсацию. Сейчас могу порекомендовать воспользоваться услугами при нуле (если абонент заинтересован, предлагаем альтернативное решение Маячок, Пополни мой счет, Обещанный платеж и пр).</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>В случае, если абонента не устраивает ответ</strong>: В таком случае можно обратится владельцу (уточнить ФИО) с паспортом в офис компании (см. <aconstr id_name="B2CKCadresa"><a href="http://kmumb.tele2.ru/fact/86941" target="_blank">здесь</a></aconstr>) и написать нестандартное заявление с подробным разъяснением причин начисления компенсации.</span></div>
+</fieldset><fieldset class="decisiontree lastSection" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Комментария нет</span></legend>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Прямой запрос компенсации в случае длительной технической проблемы (длительные массовые)</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Проверить начисление денежных компенсаций и компенсационных пакетов в Invoice за последний календарный месяц.</span></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Компенсация есть</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">В таком случае рекомендую изложить претензию в форме обратной связи на сайте Tele2 с обоснованием суммы упущенной выгоды: раздел "Помощь и поддержка" или направить претензию с документами, подтверждающими сумму упущенной выгоды по вине компании Tele2, по почте России.</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">В случае, если абонент настаивает на принятии запроса на линии и офис находится удаленно от абонента, составлять ТТ Запрос компенсации - техническая</span></div>
+</fieldset></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Компенсации нет</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Максимально можно начислить компенсацию на три номера только при прямом запросе абонента.</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Предложить абоненту компенсационный пакет.</span></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Абонент согласен</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Компенсационный пакет предоставляется в зависимости от сегмента абонента.</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Проверь в InVoice</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><img src="./Правила начисления компенсации _ Tele2 KM_files/skrin_0.jpg"></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">&nbsp;</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Какой сегмент?</span></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Social B2C</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Минуты на номера Tele2 домашнего региона</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 10 минут на Т2"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Минуты на номера сотовых операторов домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_минуты_5"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_минуты_50"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>SMS на номера любых операторов домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 10 SMS"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_sms_50"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Трафик (МБ) расходуется только в сети домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 20 Мб"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 50 Мб"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 75 Мб"</span></div>
+</fieldset></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Medium B2C</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Минуты на номера Tele2 домашнего региона</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 20 минут на Т2"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Минуты на номера сотовых операторов домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_минуты_100"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>SMS на номера любых операторов домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 20 SMS"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_sms_100"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Трафик (МБ) расходуется только в сети домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_интернет_500 Мб"</span></div>
+</fieldset></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">High B2C</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Минуты на номера Tele2 домашнего региона</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 30 минут на Т2"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Минуты на номера сотовых операторов домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_минуты_200"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>SMS на номера любых операторов домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 30 SMS"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_sms_500"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Трафик (МБ) расходуется только в сети домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_интернет_1 Гб"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_интернет_2 Гб"</span></div>
+</fieldset></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">&nbsp;</span></div>
+</fieldset></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Абонент не согласен</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">В случае отказа от пакета компенсация в размере потраченных средств в рамках лимита 300 рублей (после проверки) предоставляется <strong>ТОЛЬКО при угрозе обращения в надзорные органы, суд или написания письменной претензии.</strong></span></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Абонент не согласен с лимитом</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">В таком случае рекомендую изложить претензию в форме обратной связи на сайте Tele2 с обоснованием суммы упущенной выгоды: раздел "Помощь и поддержка" или направить претензию с документами, подтверждающими сумму упущенной выгоды по вине компании Tele2, по почте России.</span></div>
+</fieldset></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">&nbsp;</span></div>
+</fieldset></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">&nbsp;</span></div>
+</fieldset></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">&nbsp;</span></div>
+</fieldset></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Прямой запрос компенсации в случае массовой проблемы</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Проверить в тексте массовой в UMB информацию о предоставлении компенсации</span></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Информация есть</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Следовать рекомендациям в тексте массовой</span></div>
+</fieldset></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Информации нет</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Проверить начисление денежных компенсаций и компенсационных пакетов в Invoice за последний календарный месяц.</span></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Компенсация есть</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Компенсация на этот номер была предоставлена ранее, сейчас могу порекомендовать изложить претензию в форме обратной связи на сайте Tele2: раздел "Помощь и поддержка" или обратиться в офис компании владельцу с паспортом.</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">В случае, если абонент настаивает на принятии запроса на линии и офис находится удаленно от абонента, составлять ТТ <span style="color: #0000ff;">Запрос компенсации - техническая</span></span></div>
+</fieldset></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Компенсации нет</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Максимально можно начислить компенсацию на три номера только при прямом запросе абонента.</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Предложить абоненту компенсационный пакет.</span></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Абонент согласен</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Компенсационный пакет предоставляется в зависимости от сегмента абонента.</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Проверь в InVoice</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><img src="./Правила начисления компенсации _ Tele2 KM_files/skrin_0.jpg"></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">&nbsp;</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Какой сегмент?</span></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Social B2C</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Минуты на номера Tele2 домашнего региона</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 10 минут на Т2"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Минуты на номера сотовых операторов домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_минуты_5"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_минуты_50"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>SMS на номера любых операторов домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 10 SMS"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_sms_50"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Трафик (МБ) расходуется только в сети домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 20 Мб"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 50 Мб"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 75 Мб"</span></div>
+</fieldset></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Medium B2C</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Минуты на номера Tele2 домашнего региона</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 20 минут на Т2"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Минуты на номера сотовых операторов домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_минуты_100"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>SMS на номера любых операторов домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 20 SMS"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_sms_100"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Трафик (МБ) расходуется только в сети домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_интернет_500 Мб"</span></div>
+</fieldset></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">High B2C</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Минуты на номера Tele2 домашнего региона</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 30 минут на Т2"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Минуты на номера сотовых операторов домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_минуты_200"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>SMS на номера любых операторов домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 30 SMS"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_sms_500"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Трафик (МБ) расходуется только в сети домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_интернет_1 Гб"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_интернет_2 Гб"</span></div>
+</fieldset></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">&nbsp;</span></div>
+</fieldset></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Абонент не согласен</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">В случае отказа от пакета предоставляется компенсация в размере потраченных средств (может быть меньше лимита) или согласно лимиту в 300 рублей (после проверки).</span></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Абонент не согласен с лимитом</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">В таком случае рекомендую изложить претензию в форме обратной связи на сайте Tele2 с обоснованием суммы упущенной выгоды: раздел "Помощь и поддержка" или направить претензию с документами, подтверждающими сумму упущенной выгоды по вине компании Tele2, по почте России.</span></div>
+</fieldset></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">&nbsp;</span></div>
+</fieldset></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">&nbsp;</span></div>
+</fieldset></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">&nbsp;</span></div>
+</fieldset></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">&nbsp;</span></div>
+</fieldset></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Не списалась абонентская плата по тарифному плану</span></legend>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Не списалась АП из-за подписок</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Начислить средства в пределах недостающей суммы для списания АП. Выбрать тип начисления "К-контент", в комментариях указать "Контент-лояльность".</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Проверить наличие активных подписок и отключить их при запросе абонента.</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Если у абонента остались претензии к списанию за контент, действовать в соответствии с <span style="color: #1f2229;"><span style="text-decoration: underline;"><a href="http://kmumb.tele2.ru/fact/229456" target="_blank">алгоритмом</a></span>&nbsp;</span></span></div>
+</fieldset></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Не списалась АП из-за услуги Tele2</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Максимальная сумма компенсации 50 рублей.</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Выбрать тип начисления "К-начисление", в комментарии прописать название услуги, за которое проведено начисление.</span></div>
+</fieldset></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="undefined" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Не списалась АП по другим причинам</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Проверить во вкладке "Вызовы" списания с момента блокировки тарифа и суммировать с остатком на счете.</span></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="undefined" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Средств было достаточно</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Следуем алгоритму&nbsp;<span style="color: #1f2229;"><span style="text-decoration: underline;"><a href="http://kmumb.tele2.ru/fact/261556" target="_blank">Претензии к тарификации</a></span><br></span></span></div>
+</fieldset></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="undefined" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Средств было недостаточно</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Сообщаем абоненту, что средств было недостаточно.</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Предлагаем пополнить баланс или воспользоваться услугой Обещанный платеж.</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Если абонент требует компенсировать затраченные средства, проводим компенсацию с типом "К-лояльность", в комментарии указываем причину: "Списание по базовой стоимости". Компенсация начисляется согласно лимиту, не более 300 рублей.</span></div>
+</fieldset></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">&nbsp;</span></div>
+</fieldset></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">&nbsp;</span></div>
+</fieldset></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Просьба абонента предоставить компенсацию (прямой запрос)</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><span style="color: #ff0000;">Важно!</span> в случае неоднократных необоснованных обращений с запросами денег, хулиганских звонков - <strong>компенсации НЕ начислять</strong>. Предлагаем альтернативы - услуги при "0" или "совершить звонок/отправить SMS" по просьбе абонента, или.....ваш вариант альтернативы.</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Проверить начисления денежных компенсаций и компенсационных пакетов за последний календарный месяц.</span></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Есть компенсации</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Компенсация требуется по тому же вопросу?</span></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Да</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">В таком случае рекомендую изложить претензию в форме обратной связи на сайте Tele2 с обоснованием суммы упущенной выгоды: раздел "Помощь и поддержка" или направить претензию с документами, подтверждающими сумму упущенной выгоды по вине компании Tele2, по почте России.</span></div>
+</fieldset></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Нет</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Переход в ветку <span style="color: #1f2229;"><span style="text-decoration: underline;"><a href="http://kmumb.tele2.ru/fact/266661#20" class="decisiontreeGoTo">=&gt;&gt;&gt;&gt;&gt;</a></span>&nbsp;</span></span></div>
+</fieldset></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">&nbsp;</span></div>
+</fieldset></div>
+<div><fieldset class="decisiontree collapsed"><legend id="20"><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Нет компенсаций</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">1. Выяснить причину запроса</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">2. Оценить целесообразность просьбы абонента</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">3. Предложить воспользоваться услугами при "0" (нуле): Маячок, Пополни мой счет, Обещанный платеж.</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Если п. 3 не устраивает абонента, предложить компенсационный пакет.</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Абонент согласен на компенсационный пакет?</span></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Да</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Компенсационный пакет предоставляется в зависимости от сегмента абонента.</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Проверь в InVoice</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><img src="./Правила начисления компенсации _ Tele2 KM_files/skrin_0.jpg"></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">&nbsp;</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Какой сегмент?</span></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Social B2C</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Минуты на номера Tele2 домашнего региона</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 10 минут на Т2"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Минуты на номера сотовых операторов домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_минуты_5"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_минуты_50"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>SMS на номера любых операторов домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 10 SMS"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_sms_50"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Трафик (МБ) расходуется только в сети домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 20 Мб"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 50 Мб"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 75 Мб"</span></div>
+</fieldset></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Medium B2C</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Минуты на номера Tele2 домашнего региона</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 20 минут на Т2"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Минуты на номера сотовых операторов домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_минуты_100"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>SMS на номера любых операторов домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 20 SMS"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_sms_100"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Трафик (МБ) расходуется только в сети домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_интернет_500 Мб"</span></div>
+</fieldset></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">High B2C</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Минуты на номера Tele2 домашнего региона</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 30 минут на Т2"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Минуты на номера сотовых операторов домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_минуты_200"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>SMS на номера любых операторов домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 30 SMS"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_sms_500"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Трафик (МБ) расходуется только в сети домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_интернет_1 Гб"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_интернет_2 Гб"</span></div>
+</fieldset></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">&nbsp;</span></div>
+</fieldset></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Нет</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Начисление компенсации доступно в пределах установленного лимита - 300 рублей.</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Важно! Для активации ОП начисление не более 10 рублей.</span></div>
+</fieldset></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">&nbsp;</span></div>
+</fieldset></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">&nbsp;</span></div>
+</fieldset></div>
+
+
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Начисление компенсаций с типом К-тариф</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">В чем проблема абонента?</span></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Возврат средств за неоказанные услуги</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><span style="color: #1f2229;"><div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><span style="color: #ff0000;">Важно!&nbsp;</span> <span style="text-decoration: underline;"><strong>Компенсация не вносится, если:</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><img src="./Правила начисления компенсации _ Tele2 KM_files/tick_black.png" width="20" height="21" style="background-color: transparent; vertical-align: middle;">&nbsp;хотя бы 1 пакет из ошибочного тарифа израсходован полностью,</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><img src="./Правила начисления компенсации _ Tele2 KM_files/tick_black.png" width="20" height="21" style="background-color: transparent; vertical-align: middle;">&nbsp;пакет по ошибочной услуге израсходован полностью,</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><img src="./Правила начисления компенсации _ Tele2 KM_files/tick_black.png" width="20" height="21" style="background-color: transparent; vertical-align: middle;">&nbsp;ошибочный тариф/услуга частично или полностью оплачены средствами обещанного платежа.</span></div>
+<div>&nbsp;</div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Абонент ошибочно подключил услугу</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"> Предложить отключить пакет со следующего периода, воспользоваться подключенным пакетом до окончания действия тарифного периода. Если абонент настаивает на отключении пакета и возврате средств – отключаем пакет или называем USSD для отключения в случае, если администрирование в Invoice запрещено, возвращаем АП за доп.пакет.</span></div>
+</fieldset>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Абонент ошибочно отключил услугу (прошла базовая тарификация после отключения)</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"> Возможно предоставление компенсации в размере потраченных средств (может быть меньше лимита) или согласно лимиту в 300 рублей (после проверки). При сумме свыше лимита составляем <strong>ТТ Запрос компенсации – Возврат средств за неоказанные услуги</strong></span></div>
+</fieldset>
+</fieldset></div>
+
+
+
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Требование вернуть АП по тарифу за один месяц при ошибочной смене тарифа</span></legend>
+
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Абонент неверно сменил, просит изменить тариф и вернуть средства, 72 часа не прошло</span></legend>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Абонент перешел на больший тариф, чем хотел</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Предлагаем пользоваться тарифом до окончания периода действия АП, а далее самостоятельно перейти на нужный тариф.</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Если абонент настаивает, сообщаем, что не будет компенсирована разница.</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Начисляем компенсацию: АП (по меньшему тарифу + стоимость смены тарифа)</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Меняем тариф, проведя идентификацию.</span></div>
+</fieldset></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Абонент перешел на меньший тариф, чем хотел</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Проверить доступность по формуле: Списанная АП + остаток баланса. Средств достаточно на новый тариф?</span></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Средств достаточно</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Начислить сумму равную АП текущего тарифа + сумму равную плате за смену ТП в зависимости от тарифа и провести смену ТП в Invoice, проведя идентификацию.</span></div>
+</fieldset></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Средств недостаточно</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Предлагаем пополнить баланс и обратиться повторно в течение этого дня или ему будет отказано в компенсации АП.</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Желательно рекомендовать обратиться через дистанционные каналы ЛК, сайт, мессенджеры</span></div>
+</fieldset></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">&nbsp;</span></div>
+</fieldset></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">&nbsp;</span></div>
+</fieldset></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Абонент после ошибочной смены перешел самостоятельно на правильный тариф, 72 часа не прошло</span></legend>
+<div><fieldset class="decisiontree collapsed" cat_tree="undefined" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Абонент переключился на тариф с большей АП</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Произвести начисление суммы равной АП ошибочно подключенного тарифа + суммы равной плате за смену ТП. Если этих средств недостаточно для списания абонентской платы по новому тарифу, предупредить абонента о необходимости пополнить счет на недостающую сумму.</span></div>
+</fieldset></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Абонент переключился на тариф с меньшей АП</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Сообщить, что не будет компенсирована разница между тарифами. Начислить сумму равную АП нового тарифа + сумму равную плате за смену ТП в зависимости от тарифа.</span></div>
+</fieldset></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">&nbsp;</span></div>
+</fieldset></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">&nbsp;</span></div>
+</fieldset></div>
+
+</fieldset></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Другие требования компенсации по техническим ограничениям</span></legend>
+<div>
+<p class="MsoNormal"><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Если проблема актуальна, следуем по соответствующему алгоритму разговора.</span></p>
+<p class="MsoNormal"><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Только после диагностики проблемы переходим к начислению компенсации по прямому запросу абонента!</span></p>
+<p class="MsoNormal"><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Приоритет делаем на Компенсационный пакет</span></p>
+<p class="MsoNormal"><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Абонент согласен?</span></p>
+</div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Нет</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Начисление компенсации доступно после составления ТТ.</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">ТТ составляется в случае, если проблема актуальна.</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Лимит 300 рублей</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Типы компенсаций:</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">К-ошибка - Претензии на качество обслуживания или качество продаж</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">К-GPRS, К-связь, К-роуминг, К-СМС – в зависимости от жалобы абонента</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">К-контент – претензии к контент услугам, кроме услуги "Гудок"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">К-Почта – ГПЯ</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">К-начисления – АП (неактивный режим)</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">К-лояльность - Претензии к дополнительным услугам (с периодической абонентской платой или без неё)</span></div>
+</fieldset></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Да</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Компенсационный пакет предоставляется в зависимости от сегмента абонента.</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Проверь в InVoice</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><img src="./Правила начисления компенсации _ Tele2 KM_files/skrin_0.jpg"></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">&nbsp;</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Какой сегмент?</span></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Social B2C</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Минуты на номера Tele2 домашнего региона</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 10 минут на Т2"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Минуты на номера сотовых операторов домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_минуты_5"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_минуты_50"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>SMS на номера любых операторов домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 10 SMS"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_sms_50"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Трафик (МБ) расходуется только в сети домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 20 Мб"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 50 Мб"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 75 Мб"</span></div>
+</fieldset></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Medium B2C</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Минуты на номера Tele2 домашнего региона</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 20 минут на Т2"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Минуты на номера сотовых операторов домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_минуты_100"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>SMS на номера любых операторов домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 20 SMS"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_sms_100"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Трафик (МБ) расходуется только в сети домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_интернет_500 Мб"</span></div>
+</fieldset></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">High B2C</span></legend>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Минуты на номера Tele2 домашнего региона</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 30 минут на Т2"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Минуты на номера сотовых операторов домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_минуты_200"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>SMS на номера любых операторов домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"Компенсация 30 SMS"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_sms_500"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;"><strong>Трафик (МБ) расходуется только в сети домашнего региона (региона подключения)</strong></span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_интернет_1 Гб"</span></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">"К_интернет_2 Гб"</span></div>
+</fieldset></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">&nbsp;</span></div>
+</fieldset></div>
+<div><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">&nbsp;</span></div>
+</fieldset></div>
+<div><fieldset class="decisiontree collapsed" cat_tree="" cat_umb="undefined" cat_umb_sub="undefined"><legend id="" title=""><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">Требование возврата денежных средств за списания по подпискам</span></legend>
+<div><span style="text-decoration: underline;"><span style="font-family: arial, helvetica, sans-serif; font-size: medium;"><a href="http://kmumb.tele2.ru/fact/229456" target="_blank">Действовать в соответствии с алгоритмом</a></span></span>&nbsp;</div>
+</fieldset><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">&nbsp;</span></div>
+</fieldset>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: medium; color: #1f2229;">&nbsp;</span></p></td> </tr>
+</tbody>
+</table>
+</div>        	</div>
+	      </td> <!-- /content -->
+              </tr></tbody></table>
+	  </div> <!-- /main -->
+
+    <div id="footer">
+                <div class="poweredBy"><a href="http://www.drupal.org/" target="_blank"><img src="./Правила начисления компенсации _ Tele2 KM_files/powered-blue-88x31.png"></a></div>(c) MASS Group LLC <a href="http://www.massmo.ru/" target="_blank">www.massmo.ru.</a>    </div> <!-- /footer -->
+
+    <div style="clear:both;"><!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter = new Ya.Metrika({
+                    id:46312374,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/46312374" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --></div><script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"CToolsAJAX":{"scripts":{"\/modules\/jquery_update\/replace\/jquery\/1.3\/jquery.min.js":true,"\/misc\/drupal.js":true,"\/files\/languages\/ru_daa6f919568cc23086372da6efffdff8.js":true,"\/modules\/jstools\/jstools.js":true,"\/modules\/collapsiblock\/collapsiblock.js":true,"\/modules\/jstools\/jquery.cookie.js":true,"\/modules\/og\/og.js":true,"\/modules\/simplemenu\/simplemenu.js":true,"\/modules\/simplemenu\/superfish-1.4.8.js":true,"\/sites\/all\/modules\/google_analytics\/googleanalytics.js":true,"\/sites\/all\/modules\/jmp_boxy\/jscripts\/jquery.boxy.js":true,"\/sites\/all\/modules\/km\/jscript\/jquery.listen.js":true,"\/sites\/all\/modules\/km\/km_sms\/jscripts\/km_sms_init.js":true,"\/JQUERY_UPDATE_REPLACE_PATH\/jquery.form.js":true,"\/JQUERY_UPDATE_REPLACE_PATH\/ahah.js":true,"\/misc\/textarea.js":true,"\/sites\/all\/modules\/km\/jscript\/kmdecisions.js":true},"css":{"\/modules\/cck\/theme\/content-module.css":true,"\/modules\/collapsiblock\/collapsiblock.css":true,"\/modules\/ctools\/css\/ctools.css":true,"\/modules\/date\/date.css":true,"\/modules\/date\/date_popup\/themes\/datepicker.css":true,"\/modules\/date\/date_popup\/themes\/timeentry.css":true,"\/modules\/node\/node.css":true,"\/modules\/og\/theme\/og.css":true,"\/files\/css\/simplemenu-48b133845c7ada27bab282fb217a86ac.css":true,"\/modules\/simplemenu\/themes\/original\/original.css":true,"\/modules\/system\/defaults.css":true,"\/modules\/system\/system.css":true,"\/modules\/system\/system-menus.css":true,"\/modules\/user\/user.css":true,"\/modules\/cck\/modules\/fieldgroup\/fieldgroup.css":true,"\/modules\/views\/css\/views.css":true,"\/sites\/all\/modules\/km\/style\/kmdecisions.css":true,"\/sites\/all\/modules\/jmp_boxy\/style\/boxy.css":true,"\/sites\/all\/modules\/km\/km_sms\/style\/km_sms_init.css":true,"\/sites\/all\/modules\/jmp_treeselect\/style\/jquery.checktree.css":true,"\/sites\/all\/modules\/km\/km_sms\/style\/km_sms.css":true,"\/files\/jmp_color\/km_remote_big\/Golubaya__KM1_\/style.css":true,"\/themes\/km_remote_big\/override.css":true}}});
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"CToolsAJAX":{"scripts":{"\/modules\/jquery_update\/replace\/jquery\/1.3\/jquery.min.js":true,"\/misc\/drupal.js":true,"\/files\/languages\/ru_daa6f919568cc23086372da6efffdff8.js":true,"\/modules\/jstools\/jstools.js":true,"\/modules\/collapsiblock\/collapsiblock.js":true,"\/modules\/jstools\/jquery.cookie.js":true,"\/modules\/og\/og.js":true,"\/modules\/simplemenu\/simplemenu.js":true,"\/modules\/simplemenu\/superfish-1.4.8.js":true,"\/sites\/all\/modules\/google_analytics\/googleanalytics.js":true,"\/sites\/all\/modules\/jmp_boxy\/jscripts\/jquery.boxy.js":true,"\/sites\/all\/modules\/km\/jscript\/jquery.listen.js":true,"\/sites\/all\/modules\/km\/km_sms\/jscripts\/km_sms_init.js":true,"\/JQUERY_UPDATE_REPLACE_PATH\/jquery.form.js":true,"\/JQUERY_UPDATE_REPLACE_PATH\/ahah.js":true,"\/misc\/textarea.js":true,"\/sites\/all\/modules\/km\/jscript\/kmdecisions.js":true}}});
+//--><!]]>
+</script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"801134f121","applicationID":"137671225","transactionName":"ZlxaZkQCWEUABhZfVl8WeVFCCllYTg4PaUxCXEpHXzxQVwIRPUZYVlw=","queueTime":0,"applicationTime":1049,"atts":"ShtZEAwYS0s=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+
+<div class="boxy-wrapper fixed" style="display: none; z-index: 1337; visibility: visible; left: 142.5px; top: 226px;"><div class="boxy-inner"><div class="title-bar"><h2>Форма отправки SMS</h2><span class="close" title="Для закрытя окна также используйте кнопку ESC.">x</span></div><div class="boxy-content"><div class="content">
+      <form action="http://kmumb.tele2.ru/fact/266661" accept-charset="UTF-8" method="post" id="km-sms-newbareform" class="send-sms-form">
+<div><div id="send_sms_status"> </div><div id="smsFormHeader"><div class="form-item" id="sms_destination-wrapper">
+ <label for="sms_destination">Номер  телефона: </label>
+ <input type="text" maxlength="24" name="destinationNo" id="sms_destination" size="18" value="" class="form-text">
+</div>
+<span id="boxSelectNumber"><span id="selectNumber">&nbsp;</span></span><div class="form-item" id="sms_from_sender-wrapper">
+ <label for="sms_from_sender">От: </label>
+ <select name="from_sender" class="form-select" id="sms_from_sender"></select>
+</div>
+<span><input type="submit" name="op" id="edit-sms-reload-button" value="Обновить регион" class="form-submit ahah-processed">
+</span><span id="smsMnpList"><div class="form-item" id="edit-sms-mnp-checkbox-wrapper">
+ <label class="option" for="edit-sms-mnp-checkbox"><input type="checkbox" name="sms_mnp_checkbox" id="edit-sms-mnp-checkbox" value="1" class="form-checkbox ahah-processed"> Other sender</label>
+</div>
+<div class="form-item" id="edit-sms-mnp-list-wrapper">
+ <select name="sms_mnp_list" class="form-select sms-mnp-list sms-mnp-class" id="edit-sms-mnp-list"></select>
+</div>
+</span><span><input type="submit" name="op" id="edit-tree-reload-button" value="Refresh tree" class="form-submit ahah-processed">
+</span><div><div class="form-radios"><div class="form-item" id="edit-templateType-0-wrapper">
+ <label class="option" for="edit-templateType-0"><input type="radio" id="edit-templateType-0" name="templateType" value="0" checked="checked" class="form-radio"> Использовать шаблон</label>
+</div>
+<div class="form-item" id="edit-templateType-1-wrapper">
+ <label class="option" for="edit-templateType-1"><input type="radio" id="edit-templateType-1" name="templateType" value="1" class="form-radio"> Произвольный SMS</label>
+</div>
+</div></div></div><div id="chooseTemplateCategory"><ul><li tid="54378">CuVo_голосовые&nbsp;сообщения </li><li tid="54375">Escalation&nbsp;Group </li><li tid="54369">Администрирование </li><li tid="54370">Адреса&nbsp;офисов&nbsp;на&nbsp;китайском&nbsp;языке </li><li tid="54372">Бонусные&nbsp;программы </li><li tid="54364">Горячие&nbsp;линии </li><li tid="54360">ГПЯ&nbsp;/&nbsp;Кто&nbsp;звонил&nbsp;/&nbsp;Я&nbsp;на&nbsp;связи </li><li tid="54357">Интернет </li><li tid="54371">Китайская&nbsp;диаспора </li><li tid="54452">Контент </li><li tid="54368">Корпоративные&nbsp;клиенты </li><li tid="54373">Не&nbsp;определена </li><li tid="54362">Новый&nbsp;&nbsp;номер </li><li tid="54361">Офисы </li><li tid="54376">Оценка </li><li tid="54365">Поездки&nbsp;по&nbsp;России </li><li tid="54367">Прочее </li><li tid="54366">Роуминг&nbsp;за&nbsp;пределами&nbsp;России </li><li tid="54356">Скидки </li><li tid="54358">Тарифы </li><li tid="54377">ТелеМаркетинг </li><li tid="54359">Услуги </li><li tid="54374">Шаблоны </li></ul></div><div id="smsTemplateList"></div><div id="chooseCategory"></div><div class="form-item" id="sms_region-wrapper">
+ <input type="text" maxlength="128" name="sms_region" id="sms_region" size="60" value="" style="display:none;" class="form-text">
+</div>
+<input type="hidden" name="template_id" id="edit-template-id" value="0">
+<input type="hidden" name="form_build_id" id="form-0zYE83O6-3bioxeRoaMBqiDExcTnweG6vSY9ZLy8owM" value="form-0zYE83O6-3bioxeRoaMBqiDExcTnweG6vSY9ZLy8owM">
+<input type="hidden" name="form_token" id="edit-km-sms-newbareform-form-token" value="c23c61d2de6d94fe8d5a1af3023e8e01">
+<input type="hidden" name="form_id" id="edit-km-sms-newbareform" value="km_sms_newbareform">
+<div class="form-item" id="edit-message-wrapper">
+ <label for="edit-message">Текст сообщения: </label>
+ <div class="resizable-textarea"><span><textarea cols="40" rows="5" name="message" id="edit-message" class="form-textarea resizable textarea-processed"></textarea><div class="grippie" style="margin-right: 0px;"></div></span></div>
+</div>
+<fieldset class="wrapper-delayed-send"><div class="container-inline-date date-clear-block"><div class="form-item" id="edit-date-send-wrapper">
+ <label for="edit-date-send">Отложенная отправка: </label>
+ <div class="date-day"><div class="form-item" id="edit-date-send-day-wrapper">
+ <label for="edit-date-send-day">день: </label>
+ <select name="date_send[day]" class="form-select  date-day" id="edit-date-send-day"><option value=""></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6" selected="selected">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select>
+</div>
+</div><input type="hidden" name="date_send[second]" id="edit-date-send-second" value="0">
+<div class="date-month"><div class="form-item" id="edit-date-send-month-wrapper">
+ <label for="edit-date-send-month">месяц: </label>
+ <select name="date_send[month]" class="form-select  date-month" id="edit-date-send-month"><option value=""></option><option value="1">янв</option><option value="2">февр</option><option value="3">март</option><option value="4">апр</option><option value="5">май</option><option value="6">июн</option><option value="7">июл</option><option value="8" selected="selected">авг</option><option value="9">сент</option><option value="10">окт</option><option value="11">ноябр</option><option value="12">дек</option></select>
+</div>
+</div><div class="date-year"><div class="form-item" id="edit-date-send-year-wrapper">
+ <label for="edit-date-send-year">год: </label>
+ <select name="date_send[year]" class="form-select  date-year" id="edit-date-send-year"><option value=""></option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018" selected="selected">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option></select>
+</div>
+</div><div class="date-hour"><div class="form-item" id="edit-date-send-hour-wrapper">
+ <label for="edit-date-send-hour">час: </label>
+ <select name="date_send[hour]" class="form-select  date-hour" id="edit-date-send-hour"><option value=""></option><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18" selected="selected">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option></select>
+</div>
+</div><div class="date-minute"><div class="form-item" id="edit-date-send-minute-wrapper">
+ <label for="edit-date-send-minute">минута: </label>
+ <select name="date_send[minute]" class="form-select  date-minute" id="edit-date-send-minute"><option value=""></option><option value="00">00</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06" selected="selected">06</option><option value="07">07</option><option value="08">08</option><option value="09">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option></select>
+</div>
+</div>
+</div>
+</div><div class="form-item" id="edit-delayed-send-wrapper">
+ <label class="option" for="edit-delayed-send"><input type="checkbox" name="delayed_send" id="edit-delayed-send" value="1" class="form-checkbox"> Отложенная отправка</label>
+</div>
+</fieldset>
+<input type="submit" name="op" id="edit-sms-send-button" value="Отправить" class="form-submit ahah-processed">
+<input type="button" class="form-button" value="Очистить" id="edit-sms-clear-button" name="Очистить">
+</div></form>
+    </div></div></div></div></body></html>
